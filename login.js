@@ -13,7 +13,7 @@ client.once('ready', () => {
     }, 15000);
 });
 
-client.login('ODcxMDU1Nzc3NDU1MDQyNTcw.YQVv6A.Sd2En_KNAYgajybDwtg-uA4ik8I');
+client.login('SECRETONGITGUB');
 
 client.on('message', message => {
     console.log(message.content);
