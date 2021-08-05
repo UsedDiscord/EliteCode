@@ -16,7 +16,6 @@ client.login(token);
 
 client.on('message', message => {
     console.log(message.author.tag + ':' + message.content + ' (ID AUTH :)' + message.author.id);
-    //client.channels.cache.get('872863333504667668').send(message.author.tag + ' : ' + message.content + ' : ' + ' ID AUTHOR : ' + message.author.id)
 });
 
 client.on('messageDelete', message => {
