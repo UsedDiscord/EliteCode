@@ -105,6 +105,18 @@ client.on('message', message => {
 		message.channel.send("C'est donc pour cela que je protège Elyséa souvent, que tu peut me croire posséif. Oui. Je suis possésif car je suis en dépendance. Et c'est très dur... Personne n'est au courant de la situation. Sauf vous. Alors help.")
     }
     ;
+    if (message.content.startsWith('!explain1608')) {
+        message.channel.send("Coucou ma chérie <@594989884087861249>." + "\n" + "\n" + "Je ne sais pas si tu m'aimes (et voilà... Je reviens avec ma dépendance fuck) après ce qu'Elo m'a fait..." + "\n" + "\n" +"Je ne sais pas si tu veux qu'on continue l'aventure... Personellement et sincèrement, I want. I want continue this adventure ! Because i love you Elyséa." + "\n" + "\n" + " I'm not going to stop at a person who wants to block us!" + "\n" + "\n" + " I created 2 commands which are a bit stupid but I'll let you test them: (prefix : !) music1 et music2 ... You will have a little surprise ...")
+        message.channel.typing
+        message.channel.typing
+        message.channel.typing
+        message.channel.typing
+        message.channel.send("Voilà, après comme je t'ai dis, si j'ai annulé jeudi, en plus ma mère veut faire les courses de rentrées x) à partir de 15h30, et je pense sortir vers les 17h, 18h mdr..." + "\n" + "\n" + " Et c'est pour avoir plus d'argent, je vais même te dire ce que j'aurais prévu jeudi et que je ferrai le 31 aout, à la base, je voulais arriver avec un bouquet de rose ^^ ainsi que 2 Starbucks. 1 pour toi, et 1 pour moi..." + "\n" + "\n" + " Sauf que voilà, c'est compliqué, j'ai 40€ en CB et 12€ en chèques... C'est donc un peu dur de prévoir x)")
+        message.channel.typing
+        message.channel.send("J'espère que tu reviendra vite me voir. Et que tu seras disponible toute l'après-midi du 31 ^^ à partir de 14h30 je pense? On devra aller a Atlantis (Zone, pas Atlantis lui-même)." + "\n" + "\n" + "Je vais te laisser, je reviendrais te voir si tu reparles, je verrais bien si tu commente ce que Elite à dit.")
+        message.channel.send("L'utilisation du 'JE' par Elite est en train de parler au nom de <@485789557858631680>. Ethan te fais des réelles baisers. Also des FrenchKiss. A très vite et navré encore ! ")
+    }
+    ;
 	 if (message.content.startsWith('!music1')) {
         message.channel.send("ㅤ").then(m => {
             // The math thingy to calculate the user's ping
@@ -114,12 +126,30 @@ client.on('message', message => {
             const embed = new Discord.MessageEmbed()
 					.setTitle("Musique by Ely 1 / Xillions Heartbeat")
 					.setURL("https://open.spotify.com/track/5u1VAWFCjXEFP3ydJCRf7k?si=7f602bb2c3c2459c&nd=1")
-					.setAuthor("Elyséa", "https://cdn.discordapp.com/avatars/594989884087861249/a0f8250ed0bdf2e4af867d2463bc9e1a.png?size=128","Elvyne")
-					.setColor(random)
-					.setDescription("Can you feel my heartbeat?ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Can you hear the song?ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Coming ever closerㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Even though I'm gone ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ I want you to seeㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ And I want you to knowㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ I am never farㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ You are not alone ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Even in the darknessㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Even in the nightㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Look into the skyㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ And then you'll see the lightㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Anything you do hun'ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Anywhere you goㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ I am always hereㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ You aren't aloneㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Can you feel my heartbeat?ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Can you hear the song?ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Coming ever closerㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Even though I'm goneㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ I want you to seeㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ And I want you to knowㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ I am never farㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ You are not aloneㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Even in the darknessㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Even in the nightㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Look into the skyㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ And then you'll see the lightㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Anything you do hun'ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Anywhere you goㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ I am always hereㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ You aren't aloneㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ You aren't all- ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Can you feel my heartbeat?ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Can you hear the song?ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Coming ever closerㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Even though I'm goneㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ I want you to seeㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ And I want you to knowㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤI am never farㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ You are not aloneㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Even in the darknessㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Even in the nightㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Look into the skyㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ And then you'll see the lightㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Anything you do hun'ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ Anywhere you goㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ I am always hereㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ You aren't alone")
-					.setFooter("Footer text (max: 2048 characters)", "http://i.imgur.com/w1vhFSR.png")
+					.setAuthor("Elyséa", "https://cdn.discordapp.com/avatars/594989884087861249/a0f8250ed0bdf2e4af867d2463bc9e1a.png?size=128")
+					.setColor("random")
+                    .setDescription("Can you feel my heartbeat?\n" + "Can you hear the song?\n" + "Coming ever closer\n" + "Even though I'm gone\n" + "\n" + "I want you to see\n" + "And I want you to know\n" + "I am never far\n"+ "You are not alone\n" + "\n" + "Even in the darkness\n" + "Even in the night\n" +"Look into the sky\n" + "And then you'll see the light\n" + "\n" + "Anything you do hun'\n" + "Anywhere you go\n" + "I am always here\n" + "You aren't alone\n" + "\n" + "Can you feel my heartbeat?\n" + "Can you hear the song?\n" + "Coming ever closer\n" + "Even though I'm gone\n" + "\n" + "I want you to see\n" + "And I want you to know\n" + "I am never far\n" + "You are not alone\n" + "\n" + "Even in the darkness\n" + "Even in the night\n" + "Look into the sky\n" + "And then you'll see the light\n" + "\n" + "Anything you do hun'\n" + "Anywhere you go\n" + "I am always here\n" + "You aren't alone\n" + "\n" + "You aren't all-\n" + "\n" + "Can you feel my heartbeat?\n" + "Can you hear the song?\n" + "Coming ever closer\n" + "Even though I'm gone\n" + "\n" + "I want you to see\n" + "And I want you to know\n" + "I am never far\n"+ "You are not alone\n" + "\n" + "Even in the darkness\n" + "Even in the night\n" +"Look into the sky\n" + "And then you'll see the light\n" + "\n" + "Anything you do hun'\n" + "Anywhere you go\n" + "I am always here\n" + "You aren't alone\n")
 					.setThumbnail("")
 					.setTimestamp()
+            //Then It Edits the message with the ping variable embed that you created
+            m.edit(embed)
+        });
+    }
+    ;
+    if (message.content.startsWith('!music2')) {
+        message.channel.send("ㅤ").then(m => {
+            // The math thingy to calculate the user's ping
+            var ping = m.createdTimestamp - message.createdTimestamp;       //Bon, ne sert à rien mais blc
+
+            // Basic embed
+            var embed = new Discord.MessageEmbed()
+                .setTitle("Musique by Ely 2 / Cold Water Theroy of a Dead Man")
+                .setURL("https://open.spotify.com/track/6jYkaYnPCAVnMVtINhqLOS?si=be70d481b0b44fda")
+                .setAuthor("Elyséa", "https://cdn.discordapp.com/avatars/594989884087861249/a0f8250ed0bdf2e4af867d2463bc9e1a.png?size=128")
+                .setColor("random")
+                .setDescription("Everybody gets sad sometimes, you know\n" + "What else can we do when we're feeling low?\n" + "So take a deep breath and let it go\n" + "You shouldn't be drowning on your own\n" + "And if you feel you're sinking, I will jump right over\n" + "Into cold, cold water for you\n" + "And although time may take us into different places\n" + "I will still be patient with you\n" + "And I hope you know\n" + "I won't let go\n" + "I'll be your lifeline tonight\n" + "I won't let go\n" + "I'll be your lifeline tonight\n" + "'Cause we all get lost sometimes, you know?\n" + "It's how we learn and how we grow\n" + "And I wanna lay with you 'til I'm old\n" + "You shouldn't be fighting on your own\n" + "And if you feel you're sinking, I will jump right over\n" + "Into cold, cold water for you\n" + "And although time may take us into different places\n" + "I will still be patient with you\n" + "And I hope you know\n" + "I won't let go (I won't let go, no no, no no, no more)\n" + "I'll be your lifeline tonight\n" + "I won't let go\n" + "I'll be your lifeline tonight\n" + "Come on, come on\n" + "Save me from my rocking boat\n" + "I just wanna stay afloat\n" + "I'm all alone\n" + "And I hope, I hope someone's gonna take me home\n" + "Somewhere I can rest my soul (rest my soul)\n" + "I need to know you won't let go\n" + "I won't let go, no I won't let go (no no, no no, no more)\n" + "I'll be your lifeline tonight\n" + "I won't let go\n" + "I'll be your lifeline tonight\n" + "I won't let go\n")
+                .setThumbnail("")
+                .setTimestamp()
             //Then It Edits the message with the ping variable embed that you created
             m.edit(embed)
         });
