@@ -11,7 +11,7 @@ const {WebhookClient} = require("discord.js");
 
 client.once('ready', () => {
     console.log('Ready!' + 'La connexion est affecté à : ' + `${client.user.tag}`);
-    client.user.setActivity('En Couple avec Galaxy et Elyvne ; 2 Mois & 14 Jours ❤', "PLAYING")
+    client.user.setActivity('En Couple avec Galaxy et Elyvne ; 2 Mois & 17 Jours ❤ / WIP RaspeberryPI3', "PLAYING")
 });
 
 client.login(token);
@@ -71,7 +71,7 @@ client.on('message', message => {
         });
     }
     ;
-    if (message.content.startsWith('!love')) {
+    if (message.content.startsWith('!insta1')) {
         message.channel.send("ㅤ").then(m => {
             // The math thingy to calculate the user's ping
             var ping = m.createdTimestamp - message.createdTimestamp;       //Bon, ne sert à rien mais blc
@@ -93,6 +93,10 @@ client.on('message', message => {
     ;
     if (message.content.startsWith('!lovemention')) {
         message.channel.send("Mention : <@594989884087861249> Elyséa <3 & <@485789557858631680> Ethan <3")
+    }
+    ;
+	if (message.content.startsWith('!depamour')) {
+        message.channel.send("Actuellement, <@485789557858631680> est sous dépendance affective. EXPLICATION : Quand la personne que tu aimes ne te donne pas, tu te fais des films. Tu t'imagine qu'elle est en train de te tromper, qu'elle va me quitter, ou autres. 2. Tu attends toujours quelques choses en retour. 3. Ton Etat émotionnel est selon l'état de ton amour  4. Tu as perds de perdre cette personne et qu'elle te laisse tomber. C'est donc pour cela que je protège Elyséa souvent, que tu peut me croire posséif. Oui. Je suis possésif car je suis en dépendance. Et c'est très dur... Personne n'est au courant de la situation. Sauf vous. Alors help.")
     }
     ;
 });
