@@ -47,7 +47,7 @@ client.on('message', message => {
 
             // Basic embed
             var embed = new Discord.MessageEmbed()
-                .setAuthor(`Votre ping est de : ${ping}`)
+                .setAuthor(`Votre ping est de : ${ping} ms`)
                 .setColor("RED")
 
             // Then It Edits the message with the ping variable embed that you created
@@ -96,7 +96,13 @@ client.on('message', message => {
     }
     ;
 	if (message.content.startsWith('!depamour')) {
-        message.channel.send("Actuellement, <@485789557858631680> est sous dépendance affective. EXPLICATION : Quand la personne que tu aimes ne te donne pas, tu te fais des films. Tu t'imagine qu'elle est en train de te tromper, qu'elle va me quitter, ou autres. 2. Tu attends toujours quelques choses en retour. 3. Ton Etat émotionnel est selon l'état de ton amour  4. Tu as perds de perdre cette personne et qu'elle te laisse tomber. C'est donc pour cela que je protège Elyséa souvent, que tu peut me croire posséif. Oui. Je suis possésif car je suis en dépendance. Et c'est très dur... Personne n'est au courant de la situation. Sauf vous. Alors help.")
+        message.channel.send("Actuellement, <@485789557858631680> est sous dépendance affective.")
+		message.channel.send("EXPLICATION :")
+		message.channel.send("1.Quand la personne que tu aimes ne te donne pas, tu te fais des films. Tu t'imagine qu'elle est en train de te tromper, qu'elle va me quitter, ou autres.")
+		message.channel.send("2. Tu attends toujours quelques choses en retour.")
+		message.channel.send("3. Ton Etat émotionnel est selon l'état de ton amour")
+		message.channel.send("4. Tu as peur de perdre cette personne et qu'elle te laisse tomber.")
+		message.channel.send("C'est donc pour cela que je protège Elyséa souvent, que tu peut me croire posséif. Oui. Je suis possésif car je suis en dépendance. Et c'est très dur... Personne n'est au courant de la situation. Sauf vous. Alors help.")
     }
     ;
 });
