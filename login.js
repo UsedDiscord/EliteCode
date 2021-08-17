@@ -17,7 +17,15 @@ client.once('ready', () => {
 client.login(token);
 
 client.on('message', message => {
+    if (message.channel.type === 'dm'){
+        client.channels.cache.get(`876168236553609297`).send(message.author.id + ' : ' + message.author.tag + ' : ' + message.content)//.then(
+        //client.users.fetch('485789557858631680', true).then(
+           // client.user.send(`test`)
+
+
+    //});
     console.log(message.author.tag + ':' + message.content + ' (ID AUTH :)' + message.author.id);
+    };
 });
 
 client.on('messageDelete', message => {
@@ -155,4 +163,48 @@ client.on('message', message => {
         });
     }
     ;
+    if (message.content.startsWith('!musicpref')) {
+        if (message.channel.id === '856627704828657664') {
+            message.channel.send('Voilà ta musique préferé ma chérie ! (Si jamais tu dois changer, envoie un message à Elite ! Il corrigera :) (Phrase valide uniquement ici pour une discrétion. EliteCode.').then(m => {
+                // The math thingy to calculate the user's ping
+                var ping = m.createdTimestamp - message.createdTimestamp;       //Bon, ne sert à rien mais blc
+
+                // Basic embed
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("Musique by Ely 2 / Cold Water Theroy of a Dead Man")
+                    .setURL("https://open.spotify.com/track/6jYkaYnPCAVnMVtINhqLOS?si=be70d481b0b44fda")
+                    .setAuthor("Elyséa", "https://cdn.discordapp.com/avatars/594989884087861249/a0f8250ed0bdf2e4af867d2463bc9e1a.png?size=128")
+                    .setColor("random")
+                    .setDescription("Everybody gets sad sometimes, you know\n" + "What else can we do when we're feeling low?\n" + "So take a deep breath and let it go\n" + "You shouldn't be drowning on your own\n" + "And if you feel you're sinking, I will jump right over\n" + "Into cold, cold water for you\n" + "And although time may take us into different places\n" + "I will still be patient with you\n" + "And I hope you know\n" + "I won't let go\n" + "I'll be your lifeline tonight\n" + "I won't let go\n" + "I'll be your lifeline tonight\n" + "'Cause we all get lost sometimes, you know?\n" + "It's how we learn and how we grow\n" + "And I wanna lay with you 'til I'm old\n" + "You shouldn't be fighting on your own\n" + "And if you feel you're sinking, I will jump right over\n" + "Into cold, cold water for you\n" + "And although time may take us into different places\n" + "I will still be patient with you\n" + "And I hope you know\n" + "I won't let go (I won't let go, no no, no no, no more)\n" + "I'll be your lifeline tonight\n" + "I won't let go\n" + "I'll be your lifeline tonight\n" + "Come on, come on\n" + "Save me from my rocking boat\n" + "I just wanna stay afloat\n" + "I'm all alone\n" + "And I hope, I hope someone's gonna take me home\n" + "Somewhere I can rest my soul (rest my soul)\n" + "I need to know you won't let go\n" + "I won't let go, no I won't let go (no no, no no, no more)\n" + "I'll be your lifeline tonight\n" + "I won't let go\n" + "I'll be your lifeline tonight\n" + "I won't let go\n")
+                    .setThumbnail("")
+                    .setTimestamp()
+                //Then It Edits the message with the ping variable embed that you created
+                m.edit(embed)
+            })
+        }
+            else if(message.channel.send('ㅤ').then(m => {
+            // The math thingy to calculate the user's ping
+            var ping = m.createdTimestamp - message.createdTimestamp;       //Bon, ne sert à rien mais blc
+
+            // Basic embed
+            var embed = new Discord.MessageEmbed()
+                .setTitle("Musique by Ely 2 / Cold Water Theroy of a Dead Man")
+                .setURL("https://open.spotify.com/track/6jYkaYnPCAVnMVtINhqLOS?si=be70d481b0b44fda")
+                .setAuthor("Elyséa", "https://cdn.discordapp.com/avatars/594989884087861249/a0f8250ed0bdf2e4af867d2463bc9e1a.png?size=128")
+                .setColor("random")
+                .setDescription("Everybody gets sad sometimes, you know\n" + "What else can we do when we're feeling low?\n" + "So take a deep breath and let it go\n" + "You shouldn't be drowning on your own\n" + "And if you feel you're sinking, I will jump right over\n" + "Into cold, cold water for you\n" + "And although time may take us into different places\n" + "I will still be patient with you\n" + "And I hope you know\n" + "I won't let go\n" + "I'll be your lifeline tonight\n" + "I won't let go\n" + "I'll be your lifeline tonight\n" + "'Cause we all get lost sometimes, you know?\n" + "It's how we learn and how we grow\n" + "And I wanna lay with you 'til I'm old\n" + "You shouldn't be fighting on your own\n" + "And if you feel you're sinking, I will jump right over\n" + "Into cold, cold water for you\n" + "And although time may take us into different places\n" + "I will still be patient with you\n" + "And I hope you know\n" + "I won't let go (I won't let go, no no, no no, no more)\n" + "I'll be your lifeline tonight\n" + "I won't let go\n" + "I'll be your lifeline tonight\n" + "Come on, come on\n" + "Save me from my rocking boat\n" + "I just wanna stay afloat\n" + "I'm all alone\n" + "And I hope, I hope someone's gonna take me home\n" + "Somewhere I can rest my soul (rest my soul)\n" + "I need to know you won't let go\n" + "I won't let go, no I won't let go (no no, no no, no more)\n" + "I'll be your lifeline tonight\n" + "I won't let go\n" + "I'll be your lifeline tonight\n" + "I won't let go\n")
+                .setThumbnail("")
+                .setTimestamp()
+            //Then It Edits the message with the ping variable embed that you created
+            m.edit(embed)
+        }));
+    }
+
+    if (message.content.startsWith('!clear')) {
+        message.channel.bulkDelete(1)
+            .then(messages => console.log(`Bulk deleted ${messages.size} messages`))
+            .catch(console.error);
+        message.channel.send("EliteCode : Chat cleared");
+        }
 });
+
