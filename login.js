@@ -187,7 +187,7 @@ client.on('message', message => {
 
     const photo1 = new Discord.MessageEmbed()
         .setTitle('Love you ❤')
-        .setDescription(`<@594989884087861249>, il semblerait que <@485789557858631680> souhaite te montrer quelques choses ! \n\n *I want continue this adventure !*`)
+        .setDescription(`<@594989884087861249>, il semblerait que <@485789557858631680> souhaite te montrer quelque chose ! \n\n *I want continue this adventure !*`)
         .setImage('https://prnt.sc/1qanwz9')
         .setFooter(message.author.username, message.author.displayAvatarURL())
         .setTimestamp()
@@ -195,7 +195,7 @@ client.on('message', message => {
 
     const photo2 = new Discord.MessageEmbed()
         .setTitle("Je T'Aime Elyséa ❤")
-        .setDescription("On dirait que quelqu'un à éxécuter la commande !photorandominsta ! Voici un cadeau pour toi ma dulcinée <@594989884087861249> ! de la part d'<@485789557858631680>!")
+        .setDescription("On dirait que quelqu'un à éxecuter la commande !photorandominsta ! Voici un cadeau pour toi ma dulcinée <@594989884087861249> ! de la part d'<@485789557858631680>!")
         .setImage('https://prnt.sc/1qanyw2')
         .setFooter(message.author.username, message.author.displayAvatarURL())
         .setTimestamp()
@@ -227,7 +227,7 @@ client.on('message', message => {
 
     const photo6 = new Discord.MessageEmbed()
         .setTitle('Vraiment! So True !')
-        .setDescription("It's so true together <@485789557858631680> & <@594989884087861249> ! Je t'embrasse")
+        .setDescription("It's so true together <@485789557858631680> & <@594989884087861249> ! Je t'embrasse (Image)")
         .setImage('https://prnt.sc/1qao55e')
         .setFooter(message.author.username, message.author.displayAvatarURL())
         .setTimestamp()
@@ -235,7 +235,7 @@ client.on('message', message => {
 
     const photo7 = new Discord.MessageEmbed()
         .setTitle("Ma vie n'est rien sans tes messages du midi !")
-        .setDescription("Tes messages le midi me font extrêment plaisir Elyséa ! A chaque son de notification t'appartenant, je me réjouis à savoir ce que tu as marqué ! J'ai toujours une joie de lire tes messages ! <3")
+        .setDescription("Tes messages le midi me font extrêment plaisir Elyséa ! A chaque son de notification t'appartenant, je me réjouis à savoir ce que tu as marquée ! J'ai toujours une joie de lire tes messages ! <3")
         .setImage("https://prnt.sc/1qao6ck")
         .setFooter(message.author.username, message.author.displayAvatarURL())
         .setTimestamp()
@@ -243,7 +243,7 @@ client.on('message', message => {
 
     const photo8 = new Discord.MessageEmbed()
         .setTitle("Le temps est toujours trop court ! J'aimerais vraiment avoir plus de temps !")
-        .setDescription("Hélas, quand on se voit, en général, le temps est toujours trop court ! Ce qui est réellement dommage, mais nous avons tous nos imprévu ! mais au -moins ce voir, c'est magnifique, tu sais pourquoi? Car tu es **magnifique ** ma chérie ! You're so cute ! ")
+        .setDescription("Hélas, quand on se voit, en général, le temps est toujours trop court ! Ce qui est réellement dommage, mais nous avons tous nos imprévus ! mais au-moins se voir, c'est magnifique, tu sais pourquoi? Car tu es **magnifique ** ma chérie ! You're so cute ! ")
         .setImage('https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/238769279_891036618494483_8259702509770044729_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=Dk5D9tyon5UAX-voNmH&edm=ACOOH6wBAAAA&ccb=7-4&oh=be5ba7672866597380917b3db512c9b5&oe=612389BE&_nc_sid=ec1c8f&ig_cache_key=MjY0Mjk3MjczNTczNzM1NDg2NA%3D%3D.2-ccb7-4')
         .setFooter(message.author.username, message.author.displayAvatarURL())
         .setTimestamp()
