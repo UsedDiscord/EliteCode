@@ -2,7 +2,21 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const snipes = new Discord.Collection();
 const {token} = require('./config.json');
+const {MessageAttachment} = require("discord.js");
 const repliqueC = '!replique';
+const photo1img = new Discord.MessageAttachment('command/instarandom/photo1.png', 'photo1.png');
+const photo2img = new Discord.MessageAttachment('command/instarandom/photo2.png', 'photo2.png');
+const photo3img = new Discord.MessageAttachment('command/instarandom/photo3.png', 'photo3.png');
+const photo4img = new Discord.MessageAttachment('command/instarandom/photo4.png', 'photo4.png');
+const photo5img = new Discord.MessageAttachment('command/instarandom/photo5.png', 'photo5.png');
+const photo6img = new Discord.MessageAttachment('command/instarandom/photo6.png', "photo6.png");
+const photo7img = new Discord.MessageAttachment('command/instarandom/Photo7.png', 'photo7.png');
+const photo8img = new Discord.MessageAttachment('command/instarandom/photo8.png', 'photo8.png');
+const photo9img = new Discord.MessageAttachment('command/instarandom/photo9.png', 'photo9.png');
+const photo10img = new Discord.MessageAttachment('command/instarandom/photo10.png', 'photo10.png');
+const photo11img = new Discord.MessageAttachment('command/instarandom/photo11.png', 'photo11.png');
+const photo21img = new Discord.MessageAttachment('command/instarandom/photo21.png', 'photo21.png')
+
 //const {WebhookClient} = require("discord.js");
 //const webhookgithub = new WebhookClient({url : `https://discord.com/api/webhooks/872919555071148062/hssGBUjM9eBphxpZvvTzWs_2lLzzYJ7m7pFXU8uyKsYAOOzOy7qtggC0xHq0GrpJnkmo`});
 //var fs = require('fs');
@@ -195,7 +209,9 @@ client.on('message', message => {
         const photo1 = new Discord.MessageEmbed()
             .setTitle('Love you ❤')
             .setDescription(`<@594989884087861249>, il semblerait que <@485789557858631680> souhaite te montrer quelque chose ! \n\n *I want continue this adventure !*`)
-            .setImage('https://prnt.sc/1qanwz9')
+            //.setImage('https://prnt.sc/1qanwz9')
+            .attachFiles(photo1img)
+            .setImage('attachment://photo1.png')
             .setFooter("Photo 1")//, message.author.username, message.author.displayAvatarURL())
             .setTimestamp()
             .setColor("#baff58")
@@ -203,7 +219,9 @@ client.on('message', message => {
         const photo2 = new Discord.MessageEmbed()
             .setTitle("Je T'Aime Elyséa ❤")
             .setDescription("On dirait que quelqu'un à éxecuter la commande !photorandominsta ! Voici un cadeau pour toi ma dulcinée <@594989884087861249> ! de la part d'<@485789557858631680>!")
-            .setImage('https://prnt.sc/1qanyw2')
+            //.setImage('https://prnt.sc/1qanyw2')
+            .attachFiles(photo2img)
+            .setImage('attachment://photo2.png')
             .setFooter("Photo 2")//, message.author.username, message.author.displayAvatarURL())
             .setTimestamp()
             .setColor("#0e2be5")
@@ -211,7 +229,9 @@ client.on('message', message => {
         const photo3 = new Discord.MessageEmbed()
             .setTitle('Magie !')
             .setDescription("C'est vraiment magique ce qu'on peut vivre n'es-ce pas <@594989884087861249> ! From <@485789557858631680> !")
-            .setImage('https://prnt.sc/1qao06f')
+            //.setImage('https://prnt.sc/1qao06f')
+            .attachFiles(photo3img)
+            .setImage('attachment://photo3.png')
             .setFooter("Photo 3")//, message.author.username, message.author.displayAvatarURL())
             .setTimestamp()
             .setColor("#baff58")
@@ -219,15 +239,19 @@ client.on('message', message => {
         const photo4 = new Discord.MessageEmbed()
             .setTitle('My Star !')
             .setDescription("Tu es réellement mon étoile Elyséa <@594989884087861249> ! Je t'aime ! de la part d'<@485789557858631680>")
-            .setImage('https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/236452749_3042626252730635_2408720752946268155_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=UFI70u0MGZ4AX8S1KXM&edm=ACOOH6wBAAAA&ccb=7-4&oh=0febf074a03fdb23cccb51d97bfce670&oe=61239914&_nc_sid=ec1c8f&ig_cache_key=MjYzODkwODM2ODk0OTQ3NTY1Ng%3D%3D.2-ccb7-4')
+            //.setImage('https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/236452749_3042626252730635_2408720752946268155_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=UFI70u0MGZ4AX8S1KXM&edm=ACOOH6wBAAAA&ccb=7-4&oh=0febf074a03fdb23cccb51d97bfce670&oe=61239914&_nc_sid=ec1c8f&ig_cache_key=MjYzODkwODM2ODk0OTQ3NTY1Ng%3D%3D.2-ccb7-4')
             .setFooter("Photo 4")//, message.author.username, message.author.displayAvatarURL())
+            .attachFiles(photo4img)
+            .setImage('attachment://photo4.png')
             .setTimestamp()
             .setColor("#baff58")
 
         const photo5 = new Discord.MessageEmbed()
             .setTitle('Merci ! Vraiment de la part de <@485789557858631680>')
             .setDescription("Merci beaucoup pour ton amour Elyséa <@594989884087861249> ! de la part d'<@485789557858631680>")
-            .setImage('https://prnt.sc/1qao3z9')
+            //.setImage('https://prnt.sc/1qao3z9')
+            .attachFiles(photo5img)
+            .setImage('attachment://photo5.png')
             .setFooter("Photo 5")//, message.author.username, message.author.displayAvatarURL())
             .setTimestamp()
             .setColor("#baff58")
@@ -235,7 +259,9 @@ client.on('message', message => {
         const photo6 = new Discord.MessageEmbed()
             .setTitle('Vraiment! So True !')
             .setDescription("It's so true together <@485789557858631680> & <@594989884087861249> ! Je t'embrasse (Image)")
-            .setImage('https://prnt.sc/1qao55e')
+            //.setImage('https://prnt.sc/1qao55e')
+            .attachFiles(photo6img)
+            .setImage('attachment://photo6.png')
             .setFooter("Photo 6")//, message.author.username, message.author.displayAvatarURL())
             .setTimestamp()
             .setColor("#baff58")
@@ -243,7 +269,9 @@ client.on('message', message => {
         const photo7 = new Discord.MessageEmbed()
             .setTitle("Ma vie n'est rien sans tes messages du midi !")
             .setDescription("Tes messages le midi me font extrêment plaisir Elyséa ! A chaque son de notification t'appartenant, je me réjouis à savoir ce que tu as marquée ! J'ai toujours une joie de lire tes messages ! <3")
-            .setImage("https://prnt.sc/1qao6ck")
+            //.setImage("https://prnt.sc/1qao6ck")
+            .attachFiles(photo7img)
+            .setImage('attachment://photo7.png')
             .setFooter("Photo 7")//, message.author.username, message.author.displayAvatarURL())
             .setTimestamp()
             .setColor("#baff58")
@@ -251,7 +279,9 @@ client.on('message', message => {
         const photo8 = new Discord.MessageEmbed()
             .setTitle("Le temps est toujours trop court ! J'aimerais vraiment avoir plus de temps !")
             .setDescription("Hélas, quand on se voit, en général, le temps est toujours trop court ! Ce qui est réellement dommage, mais nous avons tous nos imprévus ! mais au-moins se voir, c'est magnifique, tu sais pourquoi? Car tu es **magnifique ** ma chérie ! You're so cute ! ")
-            .setImage('https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/238769279_891036618494483_8259702509770044729_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=Dk5D9tyon5UAX-voNmH&edm=ACOOH6wBAAAA&ccb=7-4&oh=be5ba7672866597380917b3db512c9b5&oe=612389BE&_nc_sid=ec1c8f&ig_cache_key=MjY0Mjk3MjczNTczNzM1NDg2NA%3D%3D.2-ccb7-4')
+            //.setImage('https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/238769279_891036618494483_8259702509770044729_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=Dk5D9tyon5UAX-voNmH&edm=ACOOH6wBAAAA&ccb=7-4&oh=be5ba7672866597380917b3db512c9b5&oe=612389BE&_nc_sid=ec1c8f&ig_cache_key=MjY0Mjk3MjczNTczNzM1NDg2NA%3D%3D.2-ccb7-4')
+            .attachFiles(photo8img)
+            .setImage('attachment://photo8.png')
             .setFooter("Photo 8")//, message.author.username, message.author.displayAvatarURL())
             .setTimestamp()
             .setColor("#baff58")
@@ -259,7 +289,9 @@ client.on('message', message => {
         const photo9 = new Discord.MessageEmbed()
             .setTitle("Il est vrai que je suis un con...")
             .setDescription("Oui, j'en suis un, et je m'en excuse ! Je ne sais pas comment me faire pardonner pour les conneries Sexiste, matcho que j'ai pu faire... I'm not perfect, yes. Sorry, from <@485789557858631680> mais, une chose qui est sûr ! Je T'aime Elyséa ! ")
-            .setImage('https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/239246944_887214472207855_195109664491069266_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=107&_nc_ohc=AmL8ubXXVLIAX-9vzOK&edm=ACOOH6wBAAAA&ccb=7-4&oh=662f7ad580ee9b0127a88de9d8d24ad1&oe=6124FC29&_nc_sid=ec1c8f&ig_cache_key=MjY0MTc4ODc4NjgwNjQ5MjkwOA%3D%3D.2-ccb7-4')
+            //.setImage('https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/239246944_887214472207855_195109664491069266_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=107&_nc_ohc=AmL8ubXXVLIAX-9vzOK&edm=ACOOH6wBAAAA&ccb=7-4&oh=662f7ad580ee9b0127a88de9d8d24ad1&oe=6124FC29&_nc_sid=ec1c8f&ig_cache_key=MjY0MTc4ODc4NjgwNjQ5MjkwOA%3D%3D.2-ccb7-4')
+            .attachFiles(photo9img)
+            .setImage('attachment://photo9.png')
             .setFooter("Photo 9")//, message.author.username, message.author.displayAvatarURL())
             .setTimestamp()
             .setColor("#baff58")
@@ -267,7 +299,9 @@ client.on('message', message => {
         const photo10 = new Discord.MessageEmbed()
             .setTitle("La Magie des SMS")
             .setDescription("Quand je recçois un de tes sms, ou Discord <@594989884087861249>, je prends toujours au-moins 5 minutes pour lire, relire et rerelire ce que tu marques... C'est tellement épic (*ref débile : Je suis un porc-épic :kappa:*) de voir ce que tu marques ! ")
-            .setImage('https://prnt.sc/1qam9hn')
+            //.setImage('https://prnt.sc/1qam9hn')
+            .attachFiles(photo10img)
+            .setImage('attachment://photo10.png')
             .setFooter("Photo 10")//, message.author.username, message.author.displayAvatarURL())
             .setTimestamp()
             .setColor("#baff58")
@@ -275,7 +309,9 @@ client.on('message', message => {
         const photo11 = new Discord.MessageEmbed()
             .setTitle("La Conjugaison together !")
             .setDescription("Love you ❤ From <@485789557858631680>")
-            .setImage('https://prnt.sc/1qamc96')
+            //.setImage('https://prnt.sc/1qamc96')
+            .attachFiles(photo11img)
+            .setImage('attachment://photo11.png')
             .setFooter("Photo 11")//, message.author.username, message.author.displayAvatarURL())
             .setTimestamp()
             .setColor("#baff58")
@@ -353,7 +389,19 @@ client.on('message', message => {
             .setFooter("Photo 20")//, message.author.username, message.author.displayAvatarURL(),)
             .setTimestamp()
             .setColor("#baff58")
-        var embedArr = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12, photo13, photo14, photo15, photo16, photo17, photo18, photo19, photo20];
+
+        const photo21 = new Discord.MessageEmbed()
+            .setTitle("Love.")
+            .setDescription("Aimer OK. Reconsillier OK !")
+            //.setImage('https://prnt.sc/1qci7ae')
+            .setFooter("Photo 21")//, message.author.username, message.author.displayAvatarURL(),)
+            .setTimestamp()
+            .setColor("#baff58")
+            .attachFiles(photo21img)
+            .setImage('attachment://photo21.png')
+
+        //var embedArr = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12, photo13, photo14, photo15, photo16, photo17, photo18, photo19, photo20, photo21];
+        var embedArr = [photo1, photo21]
         let randomEmbed = embedArr[Math.floor(Math.random() * embedArr.length)];
         message.channel.send(randomEmbed);
     }
@@ -368,12 +416,37 @@ client.on('message', message => {
         message.channel.send(str)
     };
 
-//console chat
+    //if (message.content.startsWith('!instagram')) {
+        //message.channel.send("Voici les differents dates de photographies & story de l'Instagram de @ethan.57.44").then(m => {
+            //var ping = m.createdTimestamp - message.createdTimestamp;       //Bon, ne sert à rien mais blc
 
-//let y = process.openStdin()
-//y.addListener("data", res => {
-    //let x = res.toString().trim.split(/ + /g)
-    //bot.channels.get('660585868448366605').send(x.join(" "));
-//})
+            //var embed = new Discord.MessageEmbed()
+                //.setTitle("Dates de photographies & Storys. Réagissez avec les réactions !")
+                //.setURL("https://www.instagram.com/ethan.57.44/")
+                //.setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                //.setColor("random")
+                //.setDescription("Dates de photographies :" + "\n" + "\n" + "💠 17 Janvier 2021 / 1️⃣ " + "\n" + "💠 18 Février 2021 / 2️⃣" + "\n" + "💠 19 Février 2021 / 3️⃣" + "\n" + "💠 20 Février 2021 / 4️⃣" + "\n" + "💠 21 Février 2021 / 5️⃣" + "\n" + "💠 3 Mars 2021 / 6️⃣" + "\n" + "💠 10 Mars 2021 / 7️⃣" + "\n" + "💠 18 Mars 2021 / 8️⃣" + "\n" + "💠 18 Avril 2021 / 9️⃣" + "\n" + "💠 26 Mai 2021 / 🔟" + "\n" + "💠 4 Juin 2021 / 💝" + "\n" + "💠 1 Juillet 2021 / 💔" + "\n" + "💠 31 Juillet 2021 / ❤" + "\n" + "💠 31 Août 2021 / 💍" + "\n" + "💠 19 Juillet / 💐")
+                //.setThumbnail("")
+                //.setTimestamp()
+            //m.edit(embed)
+        //}); message.channel.send("Test").then(r => {
+            //message.react('1️⃣');
+            //message.react('2️⃣');
+            //message.react('3️⃣');
+            //message.react('4️⃣');
+            //message.react('5️⃣');
+            //message.react('6️⃣');
+            //message.react('7️⃣');
+            //message.react('8️⃣');
+            //message.react('9️⃣');
+            //message.react('🔟');
+            //message.react('💝');
+            //message.react('💔');
+            //message.react('❤');
+            //message.react('💍');
+            //message.react('💐');
+        //});
+
+        //const reactions = message.awaitReactions(reaction => reaction.emoji.name === "1️⃣" || reaction.emoji.name === "2️⃣", {time: 15000});
+        //console.log(reactions)
 });
-
