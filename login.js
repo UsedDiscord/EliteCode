@@ -18,6 +18,7 @@ const photo11img = new Discord.MessageAttachment('command/instarandom/photo11.pn
 const photo18img = new Discord.MessageAttachment('command/instarandom/photo18.png', 'photo18.png');
 const photo20img = new Discord.MessageAttachment('command/instarandom/photo20.png', 'photo20.png')
 const photo21img = new Discord.MessageAttachment('command/instarandom/photo21.png', 'photo21.png')
+const instagramneige = new Discord.MessageAttachment('command/photo/janv/instagram17janv.png', 'instagram17janv.png')
 
 //const {WebhookClient} = require("discord.js");
 //const webhookgithub = new WebhookClient({url : `https://discord.com/api/webhooks/872919555071148062/hssGBUjM9eBphxpZvvTzWs_2lLzzYJ7m7pFXU8uyKsYAOOzOy7qtggC0xHq0GrpJnkmo`});
@@ -29,7 +30,7 @@ const photo21img = new Discord.MessageAttachment('command/instarandom/photo21.pn
 
 //);
 const activities_list = [
-    "En Couple avec Ethan et Elyséa ; 2 Mois & 19 Jours ❤ / WIP RaspeberryPI3 / Love you honestly ! ❤",
+    "En Couple avec Ethan et Elyséa ; 2 Mois & 22 Jours ❤ / WIP RaspeberryPI3 / Love you honestly ! ❤",
     "Elite fait passer un message à Elyséa : He loves you. Very Love",
     "Ethan t'aimes Elyséa ❤",
     "Elite by Galaxy.",
@@ -37,7 +38,9 @@ const activities_list = [
     "You're so cute Elyséa.",
     "Tu es tellement gentille Elyséa",
     "Il est vraiment désolé pour toutes ses conneries... Sorry Elyséa",
-    "De la part d'Ethan : ❤❤❤ Ely ❤❤❤"
+    "De la part d'Ethan : ❤❤❤ Ely ❤❤❤",
+    "J-10 !",
+    "3 mois ! Nous tenons bien !"
 ];
 
 client.once('ready', () => {
@@ -74,7 +77,7 @@ client.on('messageDelete', message => {
         LogChannel.send(DeletedLog)
 });
 
-client.on('message', message => {
+client.on('message',  message => {
     // Ignore messages that aren't from a guild
     if (!message.guild) return;
     if (message.content.startsWith('!ping')) {
@@ -410,39 +413,276 @@ client.on('message', message => {
     if (message.content.startsWith(repliqueC)) {
         const str = message.content.substring(repliqueC.length)
         message.channel.send(str)
-    };
+    }
+    ;
 
-    //if (message.content.startsWith('!instagram')) {
-        //message.channel.send("Voici les differents dates de photographies & story de l'Instagram de @ethan.57.44").then(m => {
-            //var ping = m.createdTimestamp - message.createdTimestamp;       //Bon, ne sert à rien mais blc
+    if (message.content.startsWith('!instagram')) {
+        message.channel.send("Voici les differents dates de photographies & story de l'Instagram de @ethan.57.44").then(m => {
+            var ping = m.createdTimestamp - message.createdTimestamp;       //Bon, ne sert à rien mais blc
 
-            //var embed = new Discord.MessageEmbed()
-                //.setTitle("Dates de photographies & Storys. Réagissez avec les réactions !")
-                //.setURL("https://www.instagram.com/ethan.57.44/")
-                //.setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
-                //.setColor("random")
-                //.setDescription("Dates de photographies :" + "\n" + "\n" + "💠 17 Janvier 2021 / 1️⃣ " + "\n" + "💠 18 Février 2021 / 2️⃣" + "\n" + "💠 19 Février 2021 / 3️⃣" + "\n" + "💠 20 Février 2021 / 4️⃣" + "\n" + "💠 21 Février 2021 / 5️⃣" + "\n" + "💠 3 Mars 2021 / 6️⃣" + "\n" + "💠 10 Mars 2021 / 7️⃣" + "\n" + "💠 18 Mars 2021 / 8️⃣" + "\n" + "💠 18 Avril 2021 / 9️⃣" + "\n" + "💠 26 Mai 2021 / 🔟" + "\n" + "💠 4 Juin 2021 / 💝" + "\n" + "💠 1 Juillet 2021 / 💔" + "\n" + "💠 31 Juillet 2021 / ❤" + "\n" + "💠 31 Août 2021 / 💍" + "\n" + "💠 19 Juillet / 💐")
-                //.setThumbnail("")
-                //.setTimestamp()
-            //m.edit(embed)
-        //}); message.channel.send("Test").then(r => {
-            //message.react('1️⃣');
-            //message.react('2️⃣');
-            //message.react('3️⃣');
-            //message.react('4️⃣');
-            //message.react('5️⃣');
-            //message.react('6️⃣');
-            //message.react('7️⃣');
-            //message.react('8️⃣');
-            //message.react('9️⃣');
-            //message.react('🔟');
-            //message.react('💝');
-            //message.react('💔');
-            //message.react('❤');
-            //message.react('💍');
-            //message.react('💐');
+            var embed = new Discord.MessageEmbed()
+                .setTitle("Dates de photographies & Storys. Réagissez avec les réactions !")
+                .setURL("https://www.instagram.com/ethan.57.44/")
+                .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                .setColor("random")
+                .setDescription("Dates de photographies :" + "\n" + "\n" + "💠 17 Janvier 2021 / 1️⃣ / Neige / WORK : ✅" + "\n" + "💠 18 Février 2021 / 2️⃣ / Golf / WORK : ✅" + "\n" + "💠 19 Février 2021 / 3️⃣ / Golf² / WORK : ✅" + "\n" + "💠 20 Février 2021 / 4️⃣ / Plage / WORK : ✅" + "\n" + "💠 21 Février 2021 / 5️⃣ / Angers / WORK : ✅" + "\n" + "💠 3 Mars 2021 / 6️⃣ / Glace / WORK : ✅" + "\n" + "💠 10 Mars 2021 / 7️⃣ / Magie / WORK : ✅" + "\n" + "💠 18 Mars 2021 / 8️⃣ / Golf(3) / WORK : ⛔" + "\n" + "💠 18 Avril 2021 / 9️⃣ / Nature / WORK : ⛔" + "\n" + "💠 26 Mai 2021 / 🔟 / Rêve / WORK : ⛔" + "\n" + "💠 4 Juin 2021 / 💝 / First Roses / WORK : ⛔" + "\n" + "💠 1 Juillet 2021 / 💔 / Anniversaire ... / WORK : ⛔" + "\n" + "💠 31 Juillet 2021 / ❤ / Plat / WORK : ⛔" + "\n" + "💠 31 Août 2021 / 💍 / Bague / WORK : ⛔" + "\n" + "💠 19 Juillet / 💐 / First Roses / WORK : ⛔")
+                .setThumbnail("")
+                .setTimestamp()
+            m.edit(embed)
+        });
+        //let message = await message.channel.send("Test")
+        //message.channel.send("Test").then(r => {
+        message.react('1️⃣');
+        message.react('2️⃣');
+        message.react('3️⃣');
+        message.react('4️⃣');
+        message.react('5️⃣');
+        message.react('6️⃣');
+        message.react('7️⃣');
+        message.react('8️⃣');
+        message.react('9️⃣');
+        message.react('🔟');
+        message.react('💝');
+        message.react('💔');
+        message.react('❤');
+        message.react('💍');
+        message.react('💐');
         //});
 
-        //const reactions = message.awaitReactions(reaction => reaction.emoji.name === "1️⃣" || reaction.emoji.name === "2️⃣", {time: 15000});
-        //console.log(reactions)
-});
+        const emoji1F = (reaction, user) => reaction.emoji.name === "1️⃣" && user.id === message.author.id;
+        const emoji2F = (reaction, user) => reaction.emoji.name === "2️⃣" && user.id === message.author.id;
+        const emoji3F = (reaction, user) => reaction.emoji.name === "3️⃣" && user.id === message.author.id;
+        const emoji4F = (reaction, user) => reaction.emoji.name === "4️⃣" && user.id === message.author.id;
+        const emoji5F = (reaction, user) => reaction.emoji.name === "5️⃣" && user.id === message.author.id;
+        const emoji6F = (reaction, user) => reaction.emoji.name === "6️⃣" && user.id === message.author.id;
+        const emoji7F = (reaction, user) => reaction.emoji.name === "7️⃣" && user.id === message.author.id;
+        const emoji8F = (reaction, user) => reaction.emoji.name === "8️⃣" && user.id === message.author.id;
+        const emoji9F = (reaction, user) => reaction.emoji.name === "9️⃣" && user.id === message.author.id;
+        const emoji10F = (reaction, user) => reaction.emoji.name === "🔟" && user.id === message.author.id;
+        const emoji11F = (reaction, user) => reaction.emoji.name === "💝" && user.id === message.author.id;
+        const emoji12F = (reaction, user) => reaction.emoji.name === "💔" && user.id === message.author.id;
+        const emoji13F = (reaction, user) => reaction.emoji.name === "❤" && user.id === message.author.id;
+        const emoji14F = (reaction, user) => reaction.emoji.name === "💍" && user.id === message.author.id;
+        const emoji15F = (reaction, user) => reaction.emoji.name === "💐" && user.id === message.author.id;
+
+
+
+        const emoji1 = message.createReactionCollector(emoji1F, {time: 90000, dispose: true})
+        const emoji2 = message.createReactionCollector(emoji2F, {time: 90000, dispose: true})
+        const emoji3 = message.createReactionCollector(emoji3F, {time: 90000, dispose: true})
+        const emoji4 = message.createReactionCollector(emoji4F, {time: 90000, dispose: true})
+        const emoji5 = message.createReactionCollector(emoji5F, {time: 90000, dispose: true})
+        const emoji6 = message.createReactionCollector(emoji6F, {time: 90000, dispose: true})
+        const emoji7 = message.createReactionCollector(emoji7F, {time: 90000, dispose: true})
+        const emoji8 = message.createReactionCollector(emoji8F, {time: 90000, dispose: true})
+        const emoji9 = message.createReactionCollector(emoji9F, {time: 90000, dispose: true})
+        const emoji10 = message.createReactionCollector(emoji10F, {time: 90000, dispose: true})
+        const emoji11 = message.createReactionCollector(emoji11F, {time: 90000, dispose: true})
+        const emoji12 = message.createReactionCollector(emoji12F, {time: 90000, dispose: true})
+        const emoji13 = message.createReactionCollector(emoji13F, {time: 90000, dispose: true})
+        const emoji14 = message.createReactionCollector(emoji14F, {time: 90000, dispose: true})
+        const emoji15 = message.createReactionCollector(emoji15F, {time: 90000, dispose: true})
+
+
+        emoji1.on("collect", r => {
+            message.channel.send("ㅤ").then(m => {
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("@ethan.57.44 | 17 Janvier 2021 ! | Neige !")
+                    .setURL("https://www.instagram.com/p/CKJqq9qBGD5/")
+                    .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                    .setColor("random")
+                    .setDescription('ethan.57.44 : De la neige et encore de la neige ❄️❄️🌨️🌨️ Return from Sarrebourg (15/01/2021) #neige')
+                    .setImage('https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/139394885_1124703447966863_4079861218806196479_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=nc1c1MB3wcEAX9UkYE9&edm=APU89FABAAAA&ccb=7-4&oh=954f2e42d27cc27ee302959a909e3c95&oe=61289EED&_nc_sid=86f79a')
+                    .addFields(
+                        { name: 'Date De Publication', value: '17 Janvier 2021 !', inline: true },
+                        { name: 'Localisation ', value: 'Neuves-Maisons, Lorraine, France', inline: true },
+                        { name: 'Hashtags ', value: '#neige', inline: true },
+
+                    )
+                    .setThumbnail("")
+                    .setTimestamp()
+                m.edit(embed)
+            });
+        });
+
+        emoji2.on("collect", r => {
+            message.channel.send("ㅤ").then(m => {
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("@ethan.57.44 | 18 Février 2021 ! | Golf !")
+                    .setURL("https://www.instagram.com/p/CLcd3F-hdhz/")
+                    .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                    .setColor("random")
+                    .setDescription('ethan.57.44 : Du golf ! Et du Golf !🏌️⛳\n' +
+                        'Tellement fun 🤩 Première fois, c\'est quand même excellent ! À une prochaine !\n' +
+                        '\n' +
+                        '#golf #nantes #sport #loireatlantique #lycee')
+                    .setImage('https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/c0.135.1080.1080a/s320x320/151142238_441404653843840_7309434009661289745_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=104&_nc_ohc=TmE4qKYxRvIAX9ZfWmq&edm=APU89FABAAAA&ccb=7-4&oh=4cd2cb7ebd13b43e829e18df091c95f0&oe=6128D10B&_nc_sid=86f79a')
+                    .addFields(
+                        { name: 'Date De Publication', value: '18 Février 2021 !', inline: true },
+                        { name: 'Localisation ', value: 'Nantes, France', inline: true },
+                        { name: 'Hashtags ', value: '#golf' + '\n' + '#nantes' + '\n' + '#sport' + '\n' + '#loireatlantique' + '\n' + '#lycee', inline: true },
+
+                    )
+                    .setThumbnail("")
+                    .setTimestamp()
+                m.edit(embed)
+            });
+        });
+        emoji3.on("collect", r => {
+            message.channel.send("ㅤ").then(m => {
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("@ethan.57.44 | 19 Février 2021 ! | Golf² !")
+                    .setURL("https://www.instagram.com/p/CLefykNBnD4/")
+                    .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                    .setColor("random")
+                    .setDescription("ethan.57.44 : Continuons de jouer au Golf à Nantes ! C'est vraiment réellement fuun ⛳🏌️" + "\n" + "(Cf photo hier)" + "\n" + "#golf #nantes #loireatlantique #jeu #abonnetoi #reze")
+                    .setImage('https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/151099685_477189243474728_56787926406580292_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=108&_nc_ohc=Sx6KrOujA-AAX9pGLIU&tn=9aN86TtEQ69OjXww&edm=APU89FABAAAA&ccb=7-4&oh=380048123db68b5344586fe3f1e3cd7c&oe=6127C1D6&_nc_sid=86f79a')
+                    .addFields(
+                        { name: 'Date De Publication', value: '19 Février 2021 !', inline: true },
+                        { name: 'Localisation ', value: 'Nantes Nord', inline: true },
+                        { name: 'Hashtags ', value: '#golf' + '\n' + '#nantes' + '\n' + '#jeu' + '\n' + '#loireatlantique' + '\n' + '#abonnetoi' + '\n' + '#reze', inline: true },
+
+                    )
+                    .setThumbnail("")
+                    .setTimestamp()
+                m.edit(embed)
+            });
+        });
+
+        emoji4.on("collect", r => {
+            message.channel.send("ㅤ").then(m => {
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("@ethan.57.44 | 20 Février 2021 ! | Plage Mer !")
+                    .setURL("https://www.instagram.com/p/CLhpuBFBzyd/")
+                    .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                    .setColor("random")
+                    .setDescription("ethan.57.44 : Et aujourd'hui on continue d'être sur Instagram pour poster une photo de la Plage de Noirmoutier 🏖️🌊👒! Malgré un vent à 50KM/H 🍃\n" +
+                        "\n" +
+                        "#plage #vendee #noirmoutier #photography #plage🌊")
+                    .setImage("https://scontent-cdt1-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/151058712_416970089412229_8812782018890064347_n.jpg?_nc_ht=scontent-cdt1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=E9t-9l4LzH0AX-BOGKH&edm=ABfd0MgBAAAA&ccb=7-4&oh=bfbe61c65718397539b0ff41685768db&oe=6128E6A3&_nc_sid=7bff83")
+                    .addFields(
+                        { name: 'Date De Publication', value: '20 Février 2021 !', inline: true },
+                        { name: 'Localisation ', value: "Noiremoutier-En-L'Île, Pays de La Loire, France", inline: true },
+                        { name: 'Hashtags ', value: '#plage' + '\n' + '#vendee' + '\n' + '#noirmoutier' + '\n' + '#photography' + '\n' + '#plage🌊', inline: true },
+
+                    )
+                    .setThumbnail("")
+                    .setTimestamp()
+                m.edit(embed)
+            });
+        });
+        emoji5.on("collect", r => {
+            message.channel.send("ㅤ").then(m => {
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("@ethan.57.44 | 21 Février 2021 ! | Château Angers!")
+                    .setURL("https://www.instagram.com/p/CLjnvA9hPrE/")
+                    .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                    .setColor("random")
+                    .setDescription("ethan.57.44 : (Repost)\n" +
+                        "\n" +
+                        "Le château 🏰 d'Angers ! Un château à aller visiter quand il sera réouvert (ce qui n'est pas le cas à cause du COVID-19.)\n" +
+                        "La photo ne date 📅 pas d'aujourd'hui. Elle date de quelques mois quand-même 🥴.\n" +
+                        "\n" +
+                        "Bisous, partage, abonne toi !\n" +
+                        "\n" +
+                        "~~~~~~~~~~~~~~~~~ On s'en fout en bas\n" +
+                        "\n" +
+                        "#photooftheday #photography #photo #vsco #vscocam #photographer #blackandwhite #portrait #naturephotography #photoshoot #canon #instaphoto #pic #streetphotography #nikon #all_shots #chateau #angers #view #abonnetoi #abonnement #follow #please #chateauangers #photographe")
+                    .setImage("https://scontent-cdt1-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/152375149_1316961402011101_7298469124950892100_n.jpg?_nc_ht=scontent-cdt1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=6XhfGgpzBCUAX8KCCB-&edm=ABfd0MgBAAAA&ccb=7-4&oh=946224d8ec562d4984f4266d3efc1822&oe=61289D38&_nc_sid=7bff83")
+                    .addFields(
+                        { name: 'Date De Publication', value: '21 Février 2021 !', inline: true },
+                        { name: 'Localisation ', value: "Château d'Angers - Domaine National", inline: true },
+                        { name: 'Hashtags ', value: '#photooftheday' + '\n' + '#photography' + '\n' + '#photo' + '\n' + '#vsco' + '\n' + '#vscocam' + '\n' + '#photographer' + '\n' + '#blackandwhite' + '\n' + '#portrait' + '\n' + '#naturephotography' + '\n' + '#photoshoot' + '\n' + '#canon' + '\n' + '#instaphoto' + '\n' + '#pic' + '\n' + '#streetphotography' + '\n' + '#nikon' + '\n' + '#all_shots' + '\n'+ '#chateau' + '\n' + '#angers' + '\n' + '#view' +  '\n' + '#abonnetoi' + '\n' + '#abonnement' + '\n' + '#follow' + '\n' + '#please' + '\n' + '#chateauangers' + '\n' + '#photographe', inline: true },
+
+                    )
+                    .setThumbnail("")
+                    .setTimestamp()
+                m.edit(embed)
+            });
+        });
+        emoji6.on("collect", r => {
+            message.channel.send("ㅤ").then(m => {
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("@ethan.57.44 | 3 Mars 2021 ! | Glace !")
+                    .setURL("https://www.instagram.com/p/CL-LKk7BA4M/")
+                    .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                    .setColor("random")
+                    .setDescription("ethan.57.44 : Yeah baby, a ice 🍦 with three balls 🍡. Vanilla Strawberry, Cassis and Mangue Passion. Very good at Nantes !\n" +
+                        "Nantes, à côté de l'hôpital Hôtel Dieu, proche d'un Starbucks, et à côté de la Galerie La Fayette ainsi que d'un espace Game détective privé, un terrain d'herbe, un skate parc! 5,60€ les 3boules peut importe la saveur !!! Et en plus avec le beau temps de Nantes en ce moment let's go ! 😎 Come on baby !\n" +
+                        "\n" +
+                        "(n'oublions pas les gestes barrière, distanciation sociales ! Masque et Gel Hydro hyper important everyone ! Pour vite sortir du COVID, COVID-19!!)\n" +
+                        "\n" +
+                        "~=~=~==~=~==~=~=~=~=~=~=~==~=~\n" +
+                        "Les Hashtags :\n" +
+                        "#nantes #glace #glaces #boules #boulesdeglace #miam #photographe #photo #photograpy #xiaomi #redmi #hoteldieu #nantesmange #restaurant #resto #covid #covid-19 #mange #manger #beautiful #glacevanille #glacesframboises #glacespassioncassis #magnifique #like #follow #followｍe #france #france #france🇫🇷 #beautemps #beautemps☀️\n" +
+                        "~`~``~~```~`~`~`~`~~~~``~~`~~`~`~~`~\n" +
+                        "\n" +
+                        "(Contact moi en dm pour info ! Bisous)\n" +
+                        "\n" +
+                        "Respect Gestes barrière et vite pour sortir du COVID-19! Bisous !!")
+                    .setImage("https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/155873141_431898078137143_1849112320405005105_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=107&_nc_ohc=ePa8iJIYybkAX-VNwjy&edm=AP_V10EBAAAA&ccb=7-4&oh=a49d0115f37dd3a38e6b2071bfc5791b&oe=6127FBA1&_nc_sid=4f375e")
+                    .addFields(
+                        { name: 'Date De Publication', value: '21 Février 2021 !', inline: true },
+                        { name: 'Localisation ', value: "CHU de Nantes", inline: true },
+                        { name: 'Hashtags ', value: '#nantes' + '\n' + '#glace' + '\n' + '#glaces' + '\n' + '#boules' + '\n' + '#boulesdeglace' + '\n' + '#miam' + '\n' + '#photographe' + '\n' + '#photo' + '\n' + '#photograpy' + '\n' + '#xiaomi' + '\n' + '#redmi' + '\n' + '#hoteldieu' + '\n' + '#nantesmange' + '\n' + '#restaurant' + '\n' + '#resto' + '\n' + '#covid' + '\n' + '#covid-19' + '\n' + '[...]', inline: true },
+
+                    )
+                    .setThumbnail("")
+                    .setTimestamp()
+                m.edit(embed)
+            });
+        });
+        emoji7.on("collect", r => {
+            message.channel.send("ㅤ").then(m => {
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("@ethan.57.44 | 10 Mars 2021 ! | Magie !")
+                    .setURL("https://www.instagram.com/p/CMQDLG_BtCf/")
+                    .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                    .setColor("random")
+                    .setDescription("Coucou 🥴\n" +
+                        "Bon, aujourd'hui c'est Harry Potter ! Et sa baguette magique (me demander pas à qui elle appartient 😅). Franchement, je sais pas vous, mais je pense qu'après une personne vous dit du mal de vous, vous avez envie d'utiliser cette baguette pour lui jeter une sort ou vous jeter un sort qui vous sera bénéfique nan? Dîtes moi le en commentaire on compare nos sorts !!\n" +
+                        "Acheter une baguette magique d'Harry Potter à Nantes. Experdiamus !\n" +
+                        "N'hésite pas à partager merci !\n" +
+                        "\n" +
+                        "-_-_-_-_-_-_-_--_-_-_-_-_-_-_--_-_-_-_--__-\n" +
+                        "Hashtags magical and mystery ;\n" +
+                        "\n" +
+                        "#magic #harrypotter #nantes #triste #tristesse #magie #magienoire #magieblanche #like #followｍe #harry #photooftheday #photograpy #photo #partage")
+                    .setImage("https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/158860633_889738004934728_2959132323564955868_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=108&_nc_ohc=azqNsaxYXqkAX-0VK2-&edm=AP_V10EBAAAA&ccb=7-4&oh=056e6763b9d7b8f934acd74255a71826&oe=61275D5F&_nc_sid=4f375e")
+                    .addFields(
+                        { name: 'Date De Publication', value: '10 Mars 2021 !', inline: true },
+                        { name: 'Localisation ', value: 'Harry Potter', inline: true },
+                        { name: 'Hashtags ', value: '#magic' + '\n' + '#harrypoter' + '\n' + '#nantes' + '\n' + '#triste' + '\n' + '#tristesse' + '\n' + '#magie' + '\n' + '#magienoire' + '\n' + '#magieblanche' + '\n' + '#like' + '\n' + '#followme' + '\n' + '#harry' + '\n' + '#photooftheday' + '\n' + '#photo' + '\n' + '#partage', inline: true },
+
+                    )
+                    .setThumbnail("")
+                    .setTimestamp()
+                m.edit(embed)
+            });
+        });
+        emoji8.on("collect", r => {
+            message.channel.send("Test")
+        });
+        emoji9.on("collect", r => {
+            message.channel.send("Test")
+        });
+        emoji10.on("collect", r => {
+            message.channel.send("Test")
+        });
+        emoji11.on("collect", r => {
+            message.channel.send("Test")
+        });
+        emoji12.on("collect", r => {
+            message.channel.send("Test")
+        });
+        emoji13.on("collect", r => {
+            message.channel.send("Test")
+        });
+        emoji14.on("collect", r => {
+            message.channel.send("Test")
+        });
+        emoji15.on("collect", r => {
+            message.channel.send("Test")
+        });
+    }
+})
