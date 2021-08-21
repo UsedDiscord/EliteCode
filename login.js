@@ -15,6 +15,8 @@ const photo8img = new Discord.MessageAttachment('command/instarandom/photo8.png'
 const photo9img = new Discord.MessageAttachment('command/instarandom/photo9.png', 'photo9.png');
 const photo10img = new Discord.MessageAttachment('command/instarandom/photo10.png', 'photo10.png');
 const photo11img = new Discord.MessageAttachment('command/instarandom/photo11.png', 'photo11.png');
+const photo18img = new Discord.MessageAttachment('command/instarandom/photo18.png', 'photo18.png');
+const photo20img = new Discord.MessageAttachment('command/instarandom/photo20.png', 'photo20.png')
 const photo21img = new Discord.MessageAttachment('command/instarandom/photo21.png', 'photo21.png')
 
 //const {WebhookClient} = require("discord.js");
@@ -369,7 +371,9 @@ client.on('message', message => {
         const photo18 = new Discord.MessageEmbed()
             .setTitle("Tellement émouvant <3")
             .setDescription("This is so true ... <@594989884087861249>... Que pense-tu de <@485789557858631680>? (Argumente?)")
-            .setImage('https://prnt.sc/1qcgggt')
+            //.setImage('https://prnt.sc/1qcgggt')
+            .attachFiles(photo18img)
+            .setImage('attachment://photo18.png')
             .setFooter("Photo 18")//, message.author.username, message.author.displayAvatarURL(),)
             .setTimestamp()
             .setColor("#baff58")
@@ -385,23 +389,15 @@ client.on('message', message => {
         const photo20 = new Discord.MessageEmbed()
             .setTitle("Love.")
             .setDescription("Aimer OK. Reconsillier OK !")
-            .setImage('https://prnt.sc/1qci7ae')
+            //.setImage('https://prnt.sc/1qci7ae')
+            .attachFiles(photo20img)
+            .setImage('attachment://photo20.png')
             .setFooter("Photo 20")//, message.author.username, message.author.displayAvatarURL(),)
             .setTimestamp()
             .setColor("#baff58")
 
-        const photo21 = new Discord.MessageEmbed()
-            .setTitle("Love.")
-            .setDescription("Aimer OK. Reconsillier OK !")
-            //.setImage('https://prnt.sc/1qci7ae')
-            .setFooter("Photo 21")//, message.author.username, message.author.displayAvatarURL(),)
-            .setTimestamp()
-            .setColor("#baff58")
-            .attachFiles(photo21img)
-            .setImage('attachment://photo21.png')
 
-        //var embedArr = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12, photo13, photo14, photo15, photo16, photo17, photo18, photo19, photo20, photo21];
-        var embedArr = [photo1, photo21]
+        var embedArr = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12, photo13, photo14, photo15, photo16, photo17, photo18, photo19, photo20];
         let randomEmbed = embedArr[Math.floor(Math.random() * embedArr.length)];
         message.channel.send(randomEmbed);
     }
