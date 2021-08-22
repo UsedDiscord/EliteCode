@@ -30,7 +30,7 @@ const instagramneige = new Discord.MessageAttachment('command/photo/janv/instagr
 
 //);
 const activities_list = [
-    "En Couple avec Ethan et Elyséa ; 2 Mois & 22 Jours ❤ / WIP RaspeberryPI3 / Love you honestly ! ❤",
+    "En Couple avec Ethan et Elyséa ; 2 Mois & 23 Jours ❤ / WIP RaspeberryPI3 / Love you honestly ! ❤",
     "Elite fait passer un message à Elyséa : He loves you. Very Love",
     "Ethan t'aimes Elyséa ❤",
     "Elite by Galaxy.",
@@ -39,8 +39,10 @@ const activities_list = [
     "Tu es tellement gentille Elyséa",
     "Il est vraiment désolé pour toutes ses conneries... Sorry Elyséa",
     "De la part d'Ethan : ❤❤❤ Ely ❤❤❤",
-    "J-10 !",
-    "3 mois ! Nous tenons bien !"
+    "J-9 !",
+    "3 mois ! Nous tenons bien !",
+    "J'ai hâte de te voir ma chérie !",
+    "Parleee mwaaa plus souvent Elyséa <3. Je n'attends que ça ! ^^"
 ];
 
 client.once('ready', () => {
@@ -425,7 +427,7 @@ client.on('message',  message => {
                 .setURL("https://www.instagram.com/ethan.57.44/")
                 .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
                 .setColor("random")
-                .setDescription("Dates de photographies :" + "\n" + "\n" + "💠 17 Janvier 2021 / 1️⃣ / Neige / WORK : ✅" + "\n" + "💠 18 Février 2021 / 2️⃣ / Golf / WORK : ✅" + "\n" + "💠 19 Février 2021 / 3️⃣ / Golf² / WORK : ✅" + "\n" + "💠 20 Février 2021 / 4️⃣ / Plage / WORK : ✅" + "\n" + "💠 21 Février 2021 / 5️⃣ / Angers / WORK : ✅" + "\n" + "💠 3 Mars 2021 / 6️⃣ / Glace / WORK : ✅" + "\n" + "💠 10 Mars 2021 / 7️⃣ / Magie / WORK : ✅" + "\n" + "💠 18 Mars 2021 / 8️⃣ / Golf(3) / WORK : ⛔" + "\n" + "💠 18 Avril 2021 / 9️⃣ / Nature / WORK : ⛔" + "\n" + "💠 26 Mai 2021 / 🔟 / Rêve / WORK : ⛔" + "\n" + "💠 4 Juin 2021 / 💝 / First Roses / WORK : ⛔" + "\n" + "💠 1 Juillet 2021 / 💔 / Anniversaire ... / WORK : ⛔" + "\n" + "💠 31 Juillet 2021 / ❤ / Plat / WORK : ⛔" + "\n" + "💠 31 Août 2021 / 💍 / Bague / WORK : ⛔" + "\n" + "💠 19 Juillet / 💐 / First Roses / WORK : ⛔")
+                .setDescription("Dates de photographies :" + "\n" + "\n" + "💠 17 Janvier 2021 / 1️⃣ / Neige / WORK : ✅" + "\n" + "💠 18 Février 2021 / 2️⃣ / Golf / WORK : ✅" + "\n" + "💠 19 Février 2021 / 3️⃣ / Golf² / WORK : ✅" + "\n" + "💠 20 Février 2021 / 4️⃣ / Plage / WORK : ✅" + "\n" + "💠 21 Février 2021 / 5️⃣ / Angers / WORK : ✅" + "\n" + "💠 3 Mars 2021 / 6️⃣ / Glace / WORK : ✅" + "\n" + "💠 10 Mars 2021 / 7️⃣ / Magie / WORK : ✅" + "\n" + "💠 18 Mars 2021 / 8️⃣ / Golf(3) / WORK : ✅" + "\n" + "💠 18 Avril 2021 / 9️⃣ / Nature / WORK : ✅" + "\n" + "💠 26 Mai 2021 / 🔟 / Rêve / WORK : ✅" + "\n" + "💠 4 Juin 2021 / 💝 / First Roses / WORK : ✅" + "\n" + "💠 1 Juillet 2021 / 💔 / Anniversaire ... / WORK : ✅" + "\n" + "💠 31 Juillet 2021 / ❤ / Plat / WORK : ✅" + "\n" + "💠 31 Août 2021 / 💍 / Bague / WORK : ✅" + "\n" + "💠 19 Juillet / 💐 / First Roses / WORK : ✅")
                 .setThumbnail("")
                 .setTimestamp()
             m.edit(embed)
@@ -464,7 +466,7 @@ client.on('message',  message => {
         const emoji13F = (reaction, user) => reaction.emoji.name === "❤" && user.id === message.author.id;
         const emoji14F = (reaction, user) => reaction.emoji.name === "💍" && user.id === message.author.id;
         const emoji15F = (reaction, user) => reaction.emoji.name === "💐" && user.id === message.author.id;
-
+        const emoji16F = (reaction, user) => reaction.emoji.name === "✨" && user.id === message.author.id;
 
 
         const emoji1 = message.createReactionCollector(emoji1F, {time: 90000, dispose: true})
@@ -482,6 +484,7 @@ client.on('message',  message => {
         const emoji13 = message.createReactionCollector(emoji13F, {time: 90000, dispose: true})
         const emoji14 = message.createReactionCollector(emoji14F, {time: 90000, dispose: true})
         const emoji15 = message.createReactionCollector(emoji15F, {time: 90000, dispose: true})
+        const emoji16 = message.createReactionCollector(emoji16F, {time : 90000, dispose: true})
 
 
         emoji1.on("collect", r => {
@@ -502,7 +505,17 @@ client.on('message',  message => {
                     .setThumbnail("")
                     .setTimestamp()
                 m.edit(embed)
+
+
             });
+
+            message.channel.send("TEST1").then(function (message) {
+                message.react('✨')//.then(r => message.channel.send("TEST12"));
+                message.react('🔚');
+                message.react('➡️');
+            })
+
+
         });
 
         emoji2.on("collect", r => {
@@ -661,28 +674,199 @@ client.on('message',  message => {
             });
         });
         emoji8.on("collect", r => {
-            message.channel.send("Test")
+            message.channel.send("ㅤ").then(m => {
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("@ethan.57.44 | 18 Mars 2021 ! | Golf (3) !")
+                    .setURL("https://www.instagram.com/p/CMkG55bBuL1/")
+                    .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                    .setColor("random")
+                    .setDescription("Aujourd'hui, nous nous retrouvons au Golf de Nantes Erdre comme tout les jeudis d'1 semaines sur 2 ! + '\n' + '••••••••♠•••♪♥•••••♠' + '\n' + 'Hashtags : +  '\n' + '#golf #nantes #nantesgolf #nantesErdre #golfbluegreen #lycee #sport #xiaomi #photograpy #photo #like #jeudi #beautiful #beautifuldestinations' + '\n' + '__________")
+                    .setImage("https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/c0.0.1080.1080a/s320x320/161609324_433532844404904_8636744362259320752_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=100&_nc_ohc=yWcbuL-MOvMAX9_qS82&edm=ABfd0MgBAAAA&ccb=7-4&oh=23c0752508bcfc0ed9b51bec3821bcf5&oe=6129A591&_nc_sid=7bff83")
+                    .addFields(
+                        { name: 'Date De Publication', value: '18 Mars 2021 !', inline: true },
+                        { name: 'Localisation ', value: 'Nantes Nord', inline: true },
+                        { name: 'Hashtags ', value: '#golf' + '\n' + '#nantes' + '\n' + '#nantesgolf' + '\n' + '#nantesErdre' + '\n' + '#golfbluegreen' + '\n' + '#lycee' + '\n' + '#sport' + '\n' + '#xiaomi' + '\n' + '#photography' + '\n' + '#photo' + '\n' + '#like' + '\n' + '#jeudi' + '\n' + '#beautiful' + '\n' + '#beautifuldestinations', inline: true },
+
+                    )
+                    .setThumbnail("")
+                    .setTimestamp()
+                m.edit(embed)
+            });
         });
         emoji9.on("collect", r => {
-            message.channel.send("Test")
+            message.channel.send("ㅤ").then(m => {
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("@ethan.57.44 | 18 Avril 2021 ! | Nature !")
+                    .setURL("https://www.instagram.com/p/CN0DJ5ghifL/")
+                    .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                    .setColor("random")
+                    .setDescription("🌳🌲🌳 Bord de Sèvres. Nantes Rezé\n" +
+                        "\n" +
+                        "#naturephotography #nature #photograpy #photo #beautiful #beautemps☀️ #temps #soleil #arbre #arbres #fleurs #fleursdeprintemps #arbres🌳")
+                    .setImage("https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/174301607_467005451021000_6519486870021269390_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=108&_nc_ohc=wbZRePYLb9sAX_CDoKj&edm=ABfd0MgBAAAA&ccb=7-4&oh=92d6525ad85d01e137fd1381e92a76fb&oe=612883F2&_nc_sid=7bff83")
+                    //Rajouter les 2 autres photos
+                    .addFields(
+                        { name: 'Date De Publication', value: '18 Avril 2021 !', inline: true },
+                        { name: 'Localisation ', value: 'Bord de Sévres', inline: true },
+                        { name: 'Hashtags ', value: '#naturephotography' + '\n' + '#nature' + '\n' + '#photograpy' + '\n' + '#photo' + '\n' + '#beautiful' + '\n' + '#beautemps☀' + '\n' + '#sport' + '\n' + '#temps' + '\n' + '#soleil' + '\n' + '#arbre' + '\n' + '#arbres' + '\n' + '#fleurs' + '\n' + '#fleursdeprintemps' + '\n' + '#arbres🌳', inline: true },
+
+                    )
+                    .setThumbnail("")
+                    .setTimestamp()
+                m.edit(embed)
+            });
         });
         emoji10.on("collect", r => {
-            message.channel.send("Test")
+            message.channel.send("ㅤ").then(m => {
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("@ethan.57.44 | 26 Mai 2021 ! | Rêve!")
+                    .setURL("https://www.instagram.com/p/CPVGs18hnde/")
+                    .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                    .setColor("random")
+                    .setDescription("Un rêve, une histoire #bac #baccalauréat #school #lycee #lyc #lycée #history #story")
+                    .setImage("https://scontent-cdt1-1.cdninstagram.com/v/t51.2885-15/e35/c0.77.622.622a/s320x320/192025179_501958140927117_3565794677084275475_n.jpg?_nc_ht=scontent-cdt1-1.cdninstagram.com&_nc_cat=109&_nc_ohc=Wgxxo4UTOqUAX-bofkg&edm=ABfd0MgBAAAA&ccb=7-4&oh=c6765524f30c094773aa173935e69587&oe=61285463&_nc_sid=7bff83")
+                    //Rajouter l'autre 'autres photos
+                    .addFields(
+                        { name: 'Date De Publication', value: '26 Mai 2021 !', inline: true },
+                        { name: 'Localisation ', value: 'NONE LOCALIZATION VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPEQUAD#1511 ! ! !', inline: true },
+                        { name: 'Hashtags ', value: '#bac' + '\n' + '#baccalauréat' + '\n' + '#school' + '\n' + '#lycee' + '\n' + '#lyc' + '\n' + '#lycée' + '\n' + '#history' + '\n' + '#story', inline: true },
+
+                    )
+                    .setThumbnail("")
+                    .setTimestamp()
+                m.edit(embed)
+            });
         });
         emoji11.on("collect", r => {
-            message.channel.send("Test")
+            message.channel.send("ㅤ").then(m => {
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("@ethan.57.44 | 4 Juin 2021 ! | First Roses!")
+                    .setURL("https://www.instagram.com/p/CPs9BTsMwCW/")
+                    .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                    .setColor("random")
+                    .setDescription("Pour toi mon amour d'Elysea, love you ❣️❤")
+                    .setImage("https://scontent-cdt1-1.cdninstagram.com/v/t51.2885-15/e35/c0.135.1080.1080a/s320x320/196638489_2640755439556090_5803092229921083890_n.jpg?_nc_ht=scontent-cdt1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=Wvw3ygwMDKUAX9pcqmi&edm=ABfd0MgBAAAA&ccb=7-4&oh=81075dc09ef9d046c57acb8387bb5e9d&oe=61288F7F&_nc_sid=7bff83")
+                    .addFields(
+                        { name: 'Date De Publication', value: '4 Juin 2021 !', inline: true },
+                        { name: 'Localisation ', value: 'NONE LOCALIZATION VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPEQUAD#1511 ! ! !', inline: true },
+                        { name: 'Hashtags ', value: 'ERROR ! NONE HASHTAGS VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPESQUAD#1511 !', inline: true },
+
+                    )
+                    .setThumbnail("")
+                    .setTimestamp()
+                m.edit(embed)
+            });
         });
         emoji12.on("collect", r => {
-            message.channel.send("Test")
+            message.channel.send("ㅤ").then(m => {
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("@ethan.57.44 | 1 Juillet 2021 ! | Anniversaire . . .!")
+                    .setURL("https://www.instagram.com/p/CQzNRcuMQAm/")
+                    .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                    .setColor("random")
+                    .setDescription("Après moultes péripéties... Les fleurs pour nos 1 mois de relations avec Élyséa ❤️ sont arrivées à bon port !\n" +
+                        "Love you Élyséa ❤️ !\n" +
+                        "Thanks you 💟\n" +
+                        "\n" +
+                        "#flowers #love #loveyou")
+                    .setImage("https://scontent-cdt1-1.cdninstagram.com/v/t51.2885-15/e35/c0.94.1080.1080a/s320x320/210198932_249491263210962_5025529873267075425_n.jpg?_nc_ht=scontent-cdt1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=1-sj5CLX6w0AX8D99yW&edm=ABfd0MgBAAAA&ccb=7-4&oh=c35ef58316af6d8defb42905b1f5ad7d&oe=61292790&_nc_sid=7bff83")
+                    .addFields(
+                        { name: 'Date De Publication', value: '1 Juillet 2021 !', inline: true },
+                        { name: 'Localisation ', value: 'Sainte-Luce-Sur-Loire, Pays de La Loire, France', inline: true },
+                        { name: 'Hashtags ', value: '#flowers' + '\n' + '#love' + '\n' + '#loveyou', inline: true },
+
+                    )
+                    .setThumbnail("")
+                    .setTimestamp()
+                m.edit(embed)
+            });
         });
         emoji13.on("collect", r => {
-            message.channel.send("Test")
+            message.channel.send("ㅤ").then(m => {
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("@ethan.57.44 | 31 Juillet 2021 ! | Plat !")
+                    .setURL("https://www.instagram.com/p/CR_9Nw9MTYj/")
+                    .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                    .setColor("random")
+                    .setDescription("Hellow !\n" +
+                        "Pour nos 2 mois avec Ely, on a été manger au restaurant Pitaya à Nantes ! (En face de Bouffay Nantes).\n" +
+                        "Le restaurant est de type Thaï. C'est extrêmement bon ! Et pas chère en plus !\n" +
+                        "Merci pour tes 2 mois ❤️\n" +
+                        "Love you 😘 !")
+                    .setImage("https://scontent-cdt1-1.cdninstagram.com/v/t51.2885-15/e35/c0.135.1080.1080a/s320x320/228526530_1954285891395030_8549092931737787732_n.jpg?_nc_ht=scontent-cdt1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=hh-uoExLzZYAX9xvgyT&tn=9aN86TtEQ69OjXww&edm=ABfd0MgBAAAA&ccb=7-4&oh=611c7078c5f896df613c1ed7b022f1d1&oe=61282CE0&_nc_sid=7bff83")
+                    .addFields(
+                        { name: 'Date De Publication', value: '31 Juillet 2021 !', inline: true },
+                        { name: 'Localisation ', value: 'Pitaya Resto', inline: true },
+                        { name: 'Hashtags ', value: 'ERROR ! NONE HASHTAGS VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPESQUAD#1511 !', inline: true },
+
+                    )
+                    .setThumbnail("")
+                    .setTimestamp()
+                m.edit(embed)
+            });
         });
         emoji14.on("collect", r => {
-            message.channel.send("Test")
+            message.channel.send("ㅤ").then(m => {
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("@ethan.57.44 | 13 Août 2021 ! | Bague !")
+                    .setURL("https://www.instagram.com/p/CShk9mYMVgy/")
+                    .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                    .setColor("random")
+                    .setDescription("Enfin !!!! J'ai pu la récupérer ! Merci @leclerc_oceane_reze ! (Merci @galerie_oceane_reze )\n" +
+                        "Très belle bague ^^ ! Très content de l'avoir récupérée aujourd'hui par ce beau temps ! Mademoiselle est très contente de la porter ! 💫❤")
+                    .setImage("https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/236376529_549106276211315_4605732620476087059_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=fdfpQ3Egoe4AX_zxK7I&edm=ABfd0MgBAAAA&ccb=7-4&oh=7fc7b3849ab1e10b0cd7357dad2b2483&oe=61298196&_nc_sid=7bff83")
+                    .addFields(
+                        { name: 'Date De Publication', value: '13 Août 2021 !', inline: true },
+                        { name: 'Localisation ', value: 'ERROR ! NONE LOCALIZATION VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPEQUAD#1511 !', inline: true },
+                        { name: 'Hashtags ', value: 'ERROR ! NONE HASHTAGS VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPESQUAD#1511 !', inline: true },
+
+                    )
+                    .setThumbnail("")
+                    .setTimestamp()
+                m.edit(embed)
+            });
         });
+
         emoji15.on("collect", r => {
-            message.channel.send("Test")
+            message.channel.send("ㅤ").then(m => {
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("@ethan.57.44 | 19 Août 2021 ! | First Roses !")
+                    .setURL("https://www.instagram.com/p/CSxVZExMhqg/")
+                    .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                    .setColor("random")
+                    .setDescription("Wow ! Merci Élyséa ❤️ ! Merci pour ses 15 magnifiques roses ! 🥰 Elles sont tellement inattendue ! God, Thanks you very much darling ❤️ ! ❣️❤️❣️ Bisous ! Love you hehe ^^")
+                    .setImage("https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/c0.135.1080.1080a/s320x320/240105503_523403118728222_2847941961932700776_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=102&_nc_ohc=Wn_ytHa8gNYAX9Cd0WB&edm=ABfd0MgBAAAA&ccb=7-4&oh=9a58516c6120b97995e75168bf9cee80&oe=61289DA6&_nc_sid=7bff83")
+                    .addFields(
+                        { name: 'Date De Publication', value: '19 Août 2021 !', inline: true },
+                        { name: 'Localisation ', value: 'Rezé', inline: true },
+                        { name: 'Hashtags ', value: 'ERROR ! NONE HASHTAGS VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPESQUAD#1511 !', inline: true },
+
+                    )
+                    .setThumbnail("")
+                    .setTimestamp()
+                m.edit(embed)
+            });
         });
+
+        emoji16.on("collect", r => {
+            message.channel.send("ㅤ").then(m => {
+                var embed = new Discord.MessageEmbed()
+                    .setTitle("@ethan.57.44 | 19 Août 2021 ! | First Roses !")
+                    .setURL("https://www.instagram.com/p/CSxVZExMhqg/")
+                    .setAuthor("Ethan", "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-19/s150x150/190585682_642036997192067_6858061746682857363_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_ohc=eczXo4k05iIAX_bp7d5&edm=ABfd0MgBAAAA&ccb=7-4&oh=9f4b8b13cd1563b47c2e565071e4f8f6&oe=61268384&_nc_sid=7bff83", "https://www.instagram.com/ethan.57.44/")
+                    .setColor("random")
+                    .setDescription("Wow ! Merci Élyséa ❤️ ! Merci pour ses 15 magnifiques roses ! 🥰 Elles sont tellement inattendue ! God, Thanks you very much darling ❤️ ! ❣️❤️❣️ Bisous ! Love you hehe ^^")
+                    .setImage("https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/c0.135.1080.1080a/s320x320/240105503_523403118728222_2847941961932700776_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=102&_nc_ohc=Wn_ytHa8gNYAX9Cd0WB&edm=ABfd0MgBAAAA&ccb=7-4&oh=9a58516c6120b97995e75168bf9cee80&oe=61289DA6&_nc_sid=7bff83")
+                    .addFields(
+                        { name: 'Date De Publication', value: '19 Août 2021 !', inline: true },
+                        { name: 'Localisation ', value: 'Rezé', inline: true },
+                        { name: 'Hashtags ', value: 'ERROR ! NONE HASHTAGS VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPESQUAD#1511 !', inline: true },
+
+                    )
+                    .setThumbnail("")
+                    .setTimestamp()
+                m.edit(embed)
+            });
+        })
     }
 })
