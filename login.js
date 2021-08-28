@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const snipes = new Discord.Collection();
 const {token} = require('./config.json');
 const {MessageAttachment} = require("discord.js");
+const Minesweeper = require('discord.js-minesweeper');
 const repliqueC = '!replique';
 const photo1img = new Discord.MessageAttachment('command/instarandom/photo1.png', 'photo1.png');
 const photo2img = new Discord.MessageAttachment('command/instarandom/photo2.png', 'photo2.png');
@@ -39,10 +40,14 @@ const activities_list = [
     "Tu es tellement gentille Elyséa",
     "Il est vraiment désolé pour toutes ses conneries... Sorry Elyséa",
     "De la part d'Ethan : ❤❤❤ Ely ❤❤❤",
-    "J-9 !",
     "3 mois ! Nous tenons bien !",
     "J'ai hâte de te voir ma chérie !",
-    "Parleee mwaaa plus souvent Elyséa <3. Je n'attends que ça ! ^^"
+    "Parleee mwaaa plus souvent Elyséa <3. Je n'attends que ça ! ^^",
+    "Merci pour ton magnifique texte bébé <3 !",
+    "J-1 for you",
+    "J-6 for together in School !",
+    "J-5 !",
+    "I'm Beautiful and Irremplaçable  ❤ and You : Cue and Irremplaçable ❤ !"
 ];
 
 client.once('ready', () => {
@@ -82,6 +87,37 @@ client.on('messageDelete', message => {
 client.on('message',  message => {
     // Ignore messages that aren't from a guild
     if (!message.guild) return;
+    if (message.content.startsWith('!help')) {
+        message.channel.send("Help en cours...").then(m => {
+
+            var personneping = message.author.id;
+
+            var embed = new Discord.MessageEmbed()
+                .setTitle("Voici les actions possibles d'EliteCode !")
+                .setColor(0x00AE86)
+                .setDescription('Bonjour' + '\n' +
+                    "Voici les actions qu'EliteCode peut effectuer avec le préfix \"**!**\"\n" +
+                    "\n" +
+                    "✨ !help ➡️ Donne la liste des commandes possible avec EliteCode\n" +
+                    "✨ !ping ➡️ Donne le ping de la personne concerné (~~un peu cassé~~)\n" +
+                    "✨ !mp ➡️ Envoi un message à la personne ayant effectué la commande.\n" +
+                    "✨ !insta1 ➡️ Affiche le post Instagram de @ethan.57.44 : Récupération de bague pour Elyséa\n" +
+                    "✨ !lovemention ➡️ Envoi les pings des 2 amours (Ethan & Elyséa)\n" +
+                    "✨ !depamour ➡️Explique la dépendance affective d'Ethan.\n" +
+                    "✨ !music1 ➡️ Musique 1 préferée d'Elyséa dans le couple\n" +
+                    "✨ !music2 ➡️ Musique 2 préferée d'Elyséa dans le couple.\n" +
+                    "✨ !musicpref ➡️La musique préféré dans le couple.\n" +
+                    "✨ !photoinstarandom ➡️ Envoi des photos random (Select par Ethan) en provenance d'Instagram\n" +
+                    "✨ !instagram ➡️ Affiche l'Instagram d'@ethan.57.44\n" +
+                    "✨ !peur ➡️ Les différents peurs qu'Ethan peut avoir...\n" +
+                    "\n" +
+                    "\n" +
+                    "⛩️Si le bot est hors-ligne ou ne réponds plus. Merci de prevenir GalaxyStars HypeSquad#1511 ( <@485789557858631680> PING) ⛩️\n")
+            m.edit(embed)
+
+        });
+    }
+    ;
     if (message.content.startsWith('!ping')) {
         message.channel.send("Pinging...").then(m => {
             // The math thingy to calculate the user's ping
@@ -96,8 +132,6 @@ client.on('message',  message => {
     ;
     if (message.content.startsWith('!mp')) {
         message.channel.send("ㅤ").then(m => {
-            var ping = m.createdTimestamp - message.createdTimestamp;       //Bon, ne sert à rien mais blc
-
             var embed = new Discord.MessageEmbed()
                 .setAuthor(`Je viens dans moins de 10 minutes dans votre boîte à lettre privée !`)
                 .setColor("RED")
@@ -152,7 +186,6 @@ client.on('message',  message => {
     ;
     if (message.content.startsWith('!music1')) {
         message.channel.send("ㅤ").then(m => {
-            var ping = m.createdTimestamp - message.createdTimestamp;       //Bon, ne sert à rien mais blc
 
             const embed = new Discord.MessageEmbed()
                 .setTitle("Musique by Ely 1 / Xillions Heartbeat")
@@ -168,7 +201,6 @@ client.on('message',  message => {
     ;
     if (message.content.startsWith('!music2')) {
         message.channel.send("ㅤ").then(m => {
-            var ping = m.createdTimestamp - message.createdTimestamp;       //Bon, ne sert à rien mais blc
 
             var embed = new Discord.MessageEmbed()
                 .setTitle("Musique by Ely 2 / Cold Water Theroy of a Dead Man")
@@ -198,7 +230,6 @@ client.on('message',  message => {
                 m.edit(embed)
             })
         } else if (message.channel.send('ㅤ').then(m => {
-            var ping = m.createdTimestamp - message.createdTimestamp;       //Bon, ne sert à rien mais blc
 
             var embed = new Discord.MessageEmbed()
                 .setTitle("Musique by Ely 2 / Cold Water Theroy of a Dead Man")
@@ -484,8 +515,7 @@ client.on('message',  message => {
         const emoji13 = message.createReactionCollector(emoji13F, {time: 90000, dispose: true})
         const emoji14 = message.createReactionCollector(emoji14F, {time: 90000, dispose: true})
         const emoji15 = message.createReactionCollector(emoji15F, {time: 90000, dispose: true})
-        const emoji16 = message.createReactionCollector(emoji16F, {time : 90000, dispose: true})
-
+        const emoji16 = message.createReactionCollector(emoji16F, {time: 90000, dispose: true})
 
         emoji1.on("collect", r => {
             message.channel.send("ㅤ").then(m => {
@@ -497,10 +527,9 @@ client.on('message',  message => {
                     .setDescription('ethan.57.44 : De la neige et encore de la neige ❄️❄️🌨️🌨️ Return from Sarrebourg (15/01/2021) #neige')
                     .setImage('https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/139394885_1124703447966863_4079861218806196479_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=nc1c1MB3wcEAX9UkYE9&edm=APU89FABAAAA&ccb=7-4&oh=954f2e42d27cc27ee302959a909e3c95&oe=61289EED&_nc_sid=86f79a')
                     .addFields(
-                        { name: 'Date De Publication', value: '17 Janvier 2021 !', inline: true },
-                        { name: 'Localisation ', value: 'Neuves-Maisons, Lorraine, France', inline: true },
-                        { name: 'Hashtags ', value: '#neige', inline: true },
-
+                        {name: 'Date De Publication', value: '17 Janvier 2021 !', inline: true},
+                        {name: 'Localisation ', value: 'Neuves-Maisons, Lorraine, France', inline: true},
+                        {name: 'Hashtags ', value: '#neige', inline: true},
                     )
                     .setThumbnail("")
                     .setTimestamp()
@@ -508,14 +537,6 @@ client.on('message',  message => {
 
 
             });
-
-            message.channel.send("TEST1").then(function (message) {
-                message.react('✨')//.then(r => message.channel.send("TEST12"));
-                message.react('🔚');
-                message.react('➡️');
-            })
-
-
         });
 
         emoji2.on("collect", r => {
@@ -531,10 +552,13 @@ client.on('message',  message => {
                         '#golf #nantes #sport #loireatlantique #lycee')
                     .setImage('https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/c0.135.1080.1080a/s320x320/151142238_441404653843840_7309434009661289745_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=104&_nc_ohc=TmE4qKYxRvIAX9ZfWmq&edm=APU89FABAAAA&ccb=7-4&oh=4cd2cb7ebd13b43e829e18df091c95f0&oe=6128D10B&_nc_sid=86f79a')
                     .addFields(
-                        { name: 'Date De Publication', value: '18 Février 2021 !', inline: true },
-                        { name: 'Localisation ', value: 'Nantes, France', inline: true },
-                        { name: 'Hashtags ', value: '#golf' + '\n' + '#nantes' + '\n' + '#sport' + '\n' + '#loireatlantique' + '\n' + '#lycee', inline: true },
-
+                        {name: 'Date De Publication', value: '18 Février 2021 !', inline: true},
+                        {name: 'Localisation ', value: 'Nantes, France', inline: true},
+                        {
+                            name: 'Hashtags ',
+                            value: '#golf' + '\n' + '#nantes' + '\n' + '#sport' + '\n' + '#loireatlantique' + '\n' + '#lycee',
+                            inline: true
+                        },
                     )
                     .setThumbnail("")
                     .setTimestamp()
@@ -551,10 +575,13 @@ client.on('message',  message => {
                     .setDescription("ethan.57.44 : Continuons de jouer au Golf à Nantes ! C'est vraiment réellement fuun ⛳🏌️" + "\n" + "(Cf photo hier)" + "\n" + "#golf #nantes #loireatlantique #jeu #abonnetoi #reze")
                     .setImage('https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/151099685_477189243474728_56787926406580292_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=108&_nc_ohc=Sx6KrOujA-AAX9pGLIU&tn=9aN86TtEQ69OjXww&edm=APU89FABAAAA&ccb=7-4&oh=380048123db68b5344586fe3f1e3cd7c&oe=6127C1D6&_nc_sid=86f79a')
                     .addFields(
-                        { name: 'Date De Publication', value: '19 Février 2021 !', inline: true },
-                        { name: 'Localisation ', value: 'Nantes Nord', inline: true },
-                        { name: 'Hashtags ', value: '#golf' + '\n' + '#nantes' + '\n' + '#jeu' + '\n' + '#loireatlantique' + '\n' + '#abonnetoi' + '\n' + '#reze', inline: true },
-
+                        {name: 'Date De Publication', value: '19 Février 2021 !', inline: true},
+                        {name: 'Localisation ', value: 'Nantes Nord', inline: true},
+                        {
+                            name: 'Hashtags ',
+                            value: '#golf' + '\n' + '#nantes' + '\n' + '#jeu' + '\n' + '#loireatlantique' + '\n' + '#abonnetoi' + '\n' + '#reze',
+                            inline: true
+                        },
                     )
                     .setThumbnail("")
                     .setTimestamp()
@@ -574,10 +601,13 @@ client.on('message',  message => {
                         "#plage #vendee #noirmoutier #photography #plage🌊")
                     .setImage("https://scontent-cdt1-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/151058712_416970089412229_8812782018890064347_n.jpg?_nc_ht=scontent-cdt1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=E9t-9l4LzH0AX-BOGKH&edm=ABfd0MgBAAAA&ccb=7-4&oh=bfbe61c65718397539b0ff41685768db&oe=6128E6A3&_nc_sid=7bff83")
                     .addFields(
-                        { name: 'Date De Publication', value: '20 Février 2021 !', inline: true },
-                        { name: 'Localisation ', value: "Noiremoutier-En-L'Île, Pays de La Loire, France", inline: true },
-                        { name: 'Hashtags ', value: '#plage' + '\n' + '#vendee' + '\n' + '#noirmoutier' + '\n' + '#photography' + '\n' + '#plage🌊', inline: true },
-
+                        {name: 'Date De Publication', value: '20 Février 2021 !', inline: true},
+                        {name: 'Localisation ', value: "Noiremoutier-En-L'Île, Pays de La Loire, France", inline: true},
+                        {
+                            name: 'Hashtags ',
+                            value: '#plage' + '\n' + '#vendee' + '\n' + '#noirmoutier' + '\n' + '#photography' + '\n' + '#plage🌊',
+                            inline: true
+                        },
                     )
                     .setThumbnail("")
                     .setTimestamp()
@@ -603,10 +633,13 @@ client.on('message',  message => {
                         "#photooftheday #photography #photo #vsco #vscocam #photographer #blackandwhite #portrait #naturephotography #photoshoot #canon #instaphoto #pic #streetphotography #nikon #all_shots #chateau #angers #view #abonnetoi #abonnement #follow #please #chateauangers #photographe")
                     .setImage("https://scontent-cdt1-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/152375149_1316961402011101_7298469124950892100_n.jpg?_nc_ht=scontent-cdt1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=6XhfGgpzBCUAX8KCCB-&edm=ABfd0MgBAAAA&ccb=7-4&oh=946224d8ec562d4984f4266d3efc1822&oe=61289D38&_nc_sid=7bff83")
                     .addFields(
-                        { name: 'Date De Publication', value: '21 Février 2021 !', inline: true },
-                        { name: 'Localisation ', value: "Château d'Angers - Domaine National", inline: true },
-                        { name: 'Hashtags ', value: '#photooftheday' + '\n' + '#photography' + '\n' + '#photo' + '\n' + '#vsco' + '\n' + '#vscocam' + '\n' + '#photographer' + '\n' + '#blackandwhite' + '\n' + '#portrait' + '\n' + '#naturephotography' + '\n' + '#photoshoot' + '\n' + '#canon' + '\n' + '#instaphoto' + '\n' + '#pic' + '\n' + '#streetphotography' + '\n' + '#nikon' + '\n' + '#all_shots' + '\n'+ '#chateau' + '\n' + '#angers' + '\n' + '#view' +  '\n' + '#abonnetoi' + '\n' + '#abonnement' + '\n' + '#follow' + '\n' + '#please' + '\n' + '#chateauangers' + '\n' + '#photographe', inline: true },
-
+                        {name: 'Date De Publication', value: '21 Février 2021 !', inline: true},
+                        {name: 'Localisation ', value: "Château d'Angers - Domaine National", inline: true},
+                        {
+                            name: 'Hashtags ',
+                            value: '#photooftheday' + '\n' + '#photography' + '\n' + '#photo' + '\n' + '#vsco' + '\n' + '#vscocam' + '\n' + '#photographer' + '\n' + '#blackandwhite' + '\n' + '#portrait' + '\n' + '#naturephotography' + '\n' + '#photoshoot' + '\n' + '#canon' + '\n' + '#instaphoto' + '\n' + '#pic' + '\n' + '#streetphotography' + '\n' + '#nikon' + '\n' + '#all_shots' + '\n' + '#chateau' + '\n' + '#angers' + '\n' + '#view' + '\n' + '#abonnetoi' + '\n' + '#abonnement' + '\n' + '#follow' + '\n' + '#please' + '\n' + '#chateauangers' + '\n' + '#photographe',
+                            inline: true
+                        },
                     )
                     .setThumbnail("")
                     .setTimestamp()
@@ -635,10 +668,13 @@ client.on('message',  message => {
                         "Respect Gestes barrière et vite pour sortir du COVID-19! Bisous !!")
                     .setImage("https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/155873141_431898078137143_1849112320405005105_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=107&_nc_ohc=ePa8iJIYybkAX-VNwjy&edm=AP_V10EBAAAA&ccb=7-4&oh=a49d0115f37dd3a38e6b2071bfc5791b&oe=6127FBA1&_nc_sid=4f375e")
                     .addFields(
-                        { name: 'Date De Publication', value: '21 Février 2021 !', inline: true },
-                        { name: 'Localisation ', value: "CHU de Nantes", inline: true },
-                        { name: 'Hashtags ', value: '#nantes' + '\n' + '#glace' + '\n' + '#glaces' + '\n' + '#boules' + '\n' + '#boulesdeglace' + '\n' + '#miam' + '\n' + '#photographe' + '\n' + '#photo' + '\n' + '#photograpy' + '\n' + '#xiaomi' + '\n' + '#redmi' + '\n' + '#hoteldieu' + '\n' + '#nantesmange' + '\n' + '#restaurant' + '\n' + '#resto' + '\n' + '#covid' + '\n' + '#covid-19' + '\n' + '[...]', inline: true },
-
+                        {name: 'Date De Publication', value: '21 Février 2021 !', inline: true},
+                        {name: 'Localisation ', value: "CHU de Nantes", inline: true},
+                        {
+                            name: 'Hashtags ',
+                            value: '#nantes' + '\n' + '#glace' + '\n' + '#glaces' + '\n' + '#boules' + '\n' + '#boulesdeglace' + '\n' + '#miam' + '\n' + '#photographe' + '\n' + '#photo' + '\n' + '#photograpy' + '\n' + '#xiaomi' + '\n' + '#redmi' + '\n' + '#hoteldieu' + '\n' + '#nantesmange' + '\n' + '#restaurant' + '\n' + '#resto' + '\n' + '#covid' + '\n' + '#covid-19' + '\n' + '[...]',
+                            inline: true
+                        },
                     )
                     .setThumbnail("")
                     .setTimestamp()
@@ -663,10 +699,13 @@ client.on('message',  message => {
                         "#magic #harrypotter #nantes #triste #tristesse #magie #magienoire #magieblanche #like #followｍe #harry #photooftheday #photograpy #photo #partage")
                     .setImage("https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/158860633_889738004934728_2959132323564955868_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=108&_nc_ohc=azqNsaxYXqkAX-0VK2-&edm=AP_V10EBAAAA&ccb=7-4&oh=056e6763b9d7b8f934acd74255a71826&oe=61275D5F&_nc_sid=4f375e")
                     .addFields(
-                        { name: 'Date De Publication', value: '10 Mars 2021 !', inline: true },
-                        { name: 'Localisation ', value: 'Harry Potter', inline: true },
-                        { name: 'Hashtags ', value: '#magic' + '\n' + '#harrypoter' + '\n' + '#nantes' + '\n' + '#triste' + '\n' + '#tristesse' + '\n' + '#magie' + '\n' + '#magienoire' + '\n' + '#magieblanche' + '\n' + '#like' + '\n' + '#followme' + '\n' + '#harry' + '\n' + '#photooftheday' + '\n' + '#photo' + '\n' + '#partage', inline: true },
-
+                        {name: 'Date De Publication', value: '10 Mars 2021 !', inline: true},
+                        {name: 'Localisation ', value: 'Harry Potter', inline: true},
+                        {
+                            name: 'Hashtags ',
+                            value: '#magic' + '\n' + '#harrypoter' + '\n' + '#nantes' + '\n' + '#triste' + '\n' + '#tristesse' + '\n' + '#magie' + '\n' + '#magienoire' + '\n' + '#magieblanche' + '\n' + '#like' + '\n' + '#followme' + '\n' + '#harry' + '\n' + '#photooftheday' + '\n' + '#photo' + '\n' + '#partage',
+                            inline: true
+                        },
                     )
                     .setThumbnail("")
                     .setTimestamp()
@@ -683,10 +722,13 @@ client.on('message',  message => {
                     .setDescription("Aujourd'hui, nous nous retrouvons au Golf de Nantes Erdre comme tout les jeudis d'1 semaines sur 2 ! + '\n' + '••••••••♠•••♪♥•••••♠' + '\n' + 'Hashtags : +  '\n' + '#golf #nantes #nantesgolf #nantesErdre #golfbluegreen #lycee #sport #xiaomi #photograpy #photo #like #jeudi #beautiful #beautifuldestinations' + '\n' + '__________")
                     .setImage("https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/c0.0.1080.1080a/s320x320/161609324_433532844404904_8636744362259320752_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=100&_nc_ohc=yWcbuL-MOvMAX9_qS82&edm=ABfd0MgBAAAA&ccb=7-4&oh=23c0752508bcfc0ed9b51bec3821bcf5&oe=6129A591&_nc_sid=7bff83")
                     .addFields(
-                        { name: 'Date De Publication', value: '18 Mars 2021 !', inline: true },
-                        { name: 'Localisation ', value: 'Nantes Nord', inline: true },
-                        { name: 'Hashtags ', value: '#golf' + '\n' + '#nantes' + '\n' + '#nantesgolf' + '\n' + '#nantesErdre' + '\n' + '#golfbluegreen' + '\n' + '#lycee' + '\n' + '#sport' + '\n' + '#xiaomi' + '\n' + '#photography' + '\n' + '#photo' + '\n' + '#like' + '\n' + '#jeudi' + '\n' + '#beautiful' + '\n' + '#beautifuldestinations', inline: true },
-
+                        {name: 'Date De Publication', value: '18 Mars 2021 !', inline: true},
+                        {name: 'Localisation ', value: 'Nantes Nord', inline: true},
+                        {
+                            name: 'Hashtags ',
+                            value: '#golf' + '\n' + '#nantes' + '\n' + '#nantesgolf' + '\n' + '#nantesErdre' + '\n' + '#golfbluegreen' + '\n' + '#lycee' + '\n' + '#sport' + '\n' + '#xiaomi' + '\n' + '#photography' + '\n' + '#photo' + '\n' + '#like' + '\n' + '#jeudi' + '\n' + '#beautiful' + '\n' + '#beautifuldestinations',
+                            inline: true
+                        },
                     )
                     .setThumbnail("")
                     .setTimestamp()
@@ -706,10 +748,13 @@ client.on('message',  message => {
                     .setImage("https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/174301607_467005451021000_6519486870021269390_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=108&_nc_ohc=wbZRePYLb9sAX_CDoKj&edm=ABfd0MgBAAAA&ccb=7-4&oh=92d6525ad85d01e137fd1381e92a76fb&oe=612883F2&_nc_sid=7bff83")
                     //Rajouter les 2 autres photos
                     .addFields(
-                        { name: 'Date De Publication', value: '18 Avril 2021 !', inline: true },
-                        { name: 'Localisation ', value: 'Bord de Sévres', inline: true },
-                        { name: 'Hashtags ', value: '#naturephotography' + '\n' + '#nature' + '\n' + '#photograpy' + '\n' + '#photo' + '\n' + '#beautiful' + '\n' + '#beautemps☀' + '\n' + '#sport' + '\n' + '#temps' + '\n' + '#soleil' + '\n' + '#arbre' + '\n' + '#arbres' + '\n' + '#fleurs' + '\n' + '#fleursdeprintemps' + '\n' + '#arbres🌳', inline: true },
-
+                        {name: 'Date De Publication', value: '18 Avril 2021 !', inline: true},
+                        {name: 'Localisation ', value: 'Bord de Sévres', inline: true},
+                        {
+                            name: 'Hashtags ',
+                            value: '#naturephotography' + '\n' + '#nature' + '\n' + '#photograpy' + '\n' + '#photo' + '\n' + '#beautiful' + '\n' + '#beautemps☀' + '\n' + '#sport' + '\n' + '#temps' + '\n' + '#soleil' + '\n' + '#arbre' + '\n' + '#arbres' + '\n' + '#fleurs' + '\n' + '#fleursdeprintemps' + '\n' + '#arbres🌳',
+                            inline: true
+                        },
                     )
                     .setThumbnail("")
                     .setTimestamp()
@@ -727,10 +772,17 @@ client.on('message',  message => {
                     .setImage("https://scontent-cdt1-1.cdninstagram.com/v/t51.2885-15/e35/c0.77.622.622a/s320x320/192025179_501958140927117_3565794677084275475_n.jpg?_nc_ht=scontent-cdt1-1.cdninstagram.com&_nc_cat=109&_nc_ohc=Wgxxo4UTOqUAX-bofkg&edm=ABfd0MgBAAAA&ccb=7-4&oh=c6765524f30c094773aa173935e69587&oe=61285463&_nc_sid=7bff83")
                     //Rajouter l'autre 'autres photos
                     .addFields(
-                        { name: 'Date De Publication', value: '26 Mai 2021 !', inline: true },
-                        { name: 'Localisation ', value: 'NONE LOCALIZATION VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPEQUAD#1511 ! ! !', inline: true },
-                        { name: 'Hashtags ', value: '#bac' + '\n' + '#baccalauréat' + '\n' + '#school' + '\n' + '#lycee' + '\n' + '#lyc' + '\n' + '#lycée' + '\n' + '#history' + '\n' + '#story', inline: true },
-
+                        {name: 'Date De Publication', value: '26 Mai 2021 !', inline: true},
+                        {
+                            name: 'Localisation ',
+                            value: 'NONE LOCALIZATION VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPEQUAD#1511 ! ! !',
+                            inline: true
+                        },
+                        {
+                            name: 'Hashtags ',
+                            value: '#bac' + '\n' + '#baccalauréat' + '\n' + '#school' + '\n' + '#lycee' + '\n' + '#lyc' + '\n' + '#lycée' + '\n' + '#history' + '\n' + '#story',
+                            inline: true
+                        },
                     )
                     .setThumbnail("")
                     .setTimestamp()
@@ -747,10 +799,17 @@ client.on('message',  message => {
                     .setDescription("Pour toi mon amour d'Elysea, love you ❣️❤")
                     .setImage("https://scontent-cdt1-1.cdninstagram.com/v/t51.2885-15/e35/c0.135.1080.1080a/s320x320/196638489_2640755439556090_5803092229921083890_n.jpg?_nc_ht=scontent-cdt1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=Wvw3ygwMDKUAX9pcqmi&edm=ABfd0MgBAAAA&ccb=7-4&oh=81075dc09ef9d046c57acb8387bb5e9d&oe=61288F7F&_nc_sid=7bff83")
                     .addFields(
-                        { name: 'Date De Publication', value: '4 Juin 2021 !', inline: true },
-                        { name: 'Localisation ', value: 'NONE LOCALIZATION VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPEQUAD#1511 ! ! !', inline: true },
-                        { name: 'Hashtags ', value: 'ERROR ! NONE HASHTAGS VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPESQUAD#1511 !', inline: true },
-
+                        {name: 'Date De Publication', value: '4 Juin 2021 !', inline: true},
+                        {
+                            name: 'Localisation ',
+                            value: 'NONE LOCALIZATION VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPEQUAD#1511 ! ! !',
+                            inline: true
+                        },
+                        {
+                            name: 'Hashtags ',
+                            value: 'ERROR ! NONE HASHTAGS VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPESQUAD#1511 !',
+                            inline: true
+                        },
                     )
                     .setThumbnail("")
                     .setTimestamp()
@@ -771,10 +830,9 @@ client.on('message',  message => {
                         "#flowers #love #loveyou")
                     .setImage("https://scontent-cdt1-1.cdninstagram.com/v/t51.2885-15/e35/c0.94.1080.1080a/s320x320/210198932_249491263210962_5025529873267075425_n.jpg?_nc_ht=scontent-cdt1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=1-sj5CLX6w0AX8D99yW&edm=ABfd0MgBAAAA&ccb=7-4&oh=c35ef58316af6d8defb42905b1f5ad7d&oe=61292790&_nc_sid=7bff83")
                     .addFields(
-                        { name: 'Date De Publication', value: '1 Juillet 2021 !', inline: true },
-                        { name: 'Localisation ', value: 'Sainte-Luce-Sur-Loire, Pays de La Loire, France', inline: true },
-                        { name: 'Hashtags ', value: '#flowers' + '\n' + '#love' + '\n' + '#loveyou', inline: true },
-
+                        {name: 'Date De Publication', value: '1 Juillet 2021 !', inline: true},
+                        {name: 'Localisation ', value: 'Sainte-Luce-Sur-Loire, Pays de La Loire, France', inline: true},
+                        {name: 'Hashtags ', value: '#flowers' + '\n' + '#love' + '\n' + '#loveyou', inline: true},
                     )
                     .setThumbnail("")
                     .setTimestamp()
@@ -795,10 +853,13 @@ client.on('message',  message => {
                         "Love you 😘 !")
                     .setImage("https://scontent-cdt1-1.cdninstagram.com/v/t51.2885-15/e35/c0.135.1080.1080a/s320x320/228526530_1954285891395030_8549092931737787732_n.jpg?_nc_ht=scontent-cdt1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=hh-uoExLzZYAX9xvgyT&tn=9aN86TtEQ69OjXww&edm=ABfd0MgBAAAA&ccb=7-4&oh=611c7078c5f896df613c1ed7b022f1d1&oe=61282CE0&_nc_sid=7bff83")
                     .addFields(
-                        { name: 'Date De Publication', value: '31 Juillet 2021 !', inline: true },
-                        { name: 'Localisation ', value: 'Pitaya Resto', inline: true },
-                        { name: 'Hashtags ', value: 'ERROR ! NONE HASHTAGS VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPESQUAD#1511 !', inline: true },
-
+                        {name: 'Date De Publication', value: '31 Juillet 2021 !', inline: true},
+                        {name: 'Localisation ', value: 'Pitaya Resto', inline: true},
+                        {
+                            name: 'Hashtags ',
+                            value: 'ERROR ! NONE HASHTAGS VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPESQUAD#1511 !',
+                            inline: true
+                        },
                     )
                     .setThumbnail("")
                     .setTimestamp()
@@ -816,10 +877,17 @@ client.on('message',  message => {
                         "Très belle bague ^^ ! Très content de l'avoir récupérée aujourd'hui par ce beau temps ! Mademoiselle est très contente de la porter ! 💫❤")
                     .setImage("https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/236376529_549106276211315_4605732620476087059_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=fdfpQ3Egoe4AX_zxK7I&edm=ABfd0MgBAAAA&ccb=7-4&oh=7fc7b3849ab1e10b0cd7357dad2b2483&oe=61298196&_nc_sid=7bff83")
                     .addFields(
-                        { name: 'Date De Publication', value: '13 Août 2021 !', inline: true },
-                        { name: 'Localisation ', value: 'ERROR ! NONE LOCALIZATION VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPEQUAD#1511 !', inline: true },
-                        { name: 'Hashtags ', value: 'ERROR ! NONE HASHTAGS VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPESQUAD#1511 !', inline: true },
-
+                        {name: 'Date De Publication', value: '13 Août 2021 !', inline: true},
+                        {
+                            name: 'Localisation ',
+                            value: 'ERROR ! NONE LOCALIZATION VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPEQUAD#1511 !',
+                            inline: true
+                        },
+                        {
+                            name: 'Hashtags ',
+                            value: 'ERROR ! NONE HASHTAGS VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPESQUAD#1511 !',
+                            inline: true
+                        },
                     )
                     .setThumbnail("")
                     .setTimestamp()
@@ -837,10 +905,13 @@ client.on('message',  message => {
                     .setDescription("Wow ! Merci Élyséa ❤️ ! Merci pour ses 15 magnifiques roses ! 🥰 Elles sont tellement inattendue ! God, Thanks you very much darling ❤️ ! ❣️❤️❣️ Bisous ! Love you hehe ^^")
                     .setImage("https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/c0.135.1080.1080a/s320x320/240105503_523403118728222_2847941961932700776_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=102&_nc_ohc=Wn_ytHa8gNYAX9Cd0WB&edm=ABfd0MgBAAAA&ccb=7-4&oh=9a58516c6120b97995e75168bf9cee80&oe=61289DA6&_nc_sid=7bff83")
                     .addFields(
-                        { name: 'Date De Publication', value: '19 Août 2021 !', inline: true },
-                        { name: 'Localisation ', value: 'Rezé', inline: true },
-                        { name: 'Hashtags ', value: 'ERROR ! NONE HASHTAGS VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPESQUAD#1511 !', inline: true },
-
+                        {name: 'Date De Publication', value: '19 Août 2021 !', inline: true},
+                        {name: 'Localisation ', value: 'Rezé', inline: true},
+                        {
+                            name: 'Hashtags ',
+                            value: 'ERROR ! NONE HASHTAGS VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPESQUAD#1511 !',
+                            inline: true
+                        },
                     )
                     .setThumbnail("")
                     .setTimestamp()
@@ -858,10 +929,13 @@ client.on('message',  message => {
                     .setDescription("Wow ! Merci Élyséa ❤️ ! Merci pour ses 15 magnifiques roses ! 🥰 Elles sont tellement inattendue ! God, Thanks you very much darling ❤️ ! ❣️❤️❣️ Bisous ! Love you hehe ^^")
                     .setImage("https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/c0.135.1080.1080a/s320x320/240105503_523403118728222_2847941961932700776_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=102&_nc_ohc=Wn_ytHa8gNYAX9Cd0WB&edm=ABfd0MgBAAAA&ccb=7-4&oh=9a58516c6120b97995e75168bf9cee80&oe=61289DA6&_nc_sid=7bff83")
                     .addFields(
-                        { name: 'Date De Publication', value: '19 Août 2021 !', inline: true },
-                        { name: 'Localisation ', value: 'Rezé', inline: true },
-                        { name: 'Hashtags ', value: 'ERROR ! NONE HASHTAGS VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPESQUAD#1511 !', inline: true },
-
+                        {name: 'Date De Publication', value: '19 Août 2021 !', inline: true},
+                        {name: 'Localisation ', value: 'Rezé', inline: true},
+                        {
+                            name: 'Hashtags ',
+                            value: 'ERROR ! NONE HASHTAGS VALIDE ! PLEASE REPORT THIS TO GALAXYSTARS HYPESQUAD#1511 !',
+                            inline: true
+                        },
                     )
                     .setThumbnail("")
                     .setTimestamp()
@@ -869,4 +943,16 @@ client.on('message',  message => {
             });
         })
     }
+    if (message.content.startsWith('!minesweeper')) {
+        message.channel.send("test1")
+        const minesweeper = new Minesweeper({
+            rows: 10,
+            columns: 10,
+            mines: 5,
+            emote: 'bomb',
+        });
+        message.channel.send(minesweeper.start());
+
+    }
+
 })
