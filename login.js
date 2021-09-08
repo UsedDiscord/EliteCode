@@ -17,44 +17,33 @@ const photo9img = new Discord.MessageAttachment('command/instarandom/photo9.png'
 const photo10img = new Discord.MessageAttachment('command/instarandom/photo10.png', 'photo10.png');
 const photo11img = new Discord.MessageAttachment('command/instarandom/photo11.png', 'photo11.png');
 const photo18img = new Discord.MessageAttachment('command/instarandom/photo18.png', 'photo18.png');
-const photo20img = new Discord.MessageAttachment('command/instarandom/photo20.png', 'photo20.png')
-const photo21img = new Discord.MessageAttachment('command/instarandom/photo21.png', 'photo21.png')
-const instagramneige = new Discord.MessageAttachment('command/photo/janv/instagram17janv.png', 'instagram17janv.png')
-
-//const {WebhookClient} = require("discord.js");
-//const webhookgithub = new WebhookClient({url : `https://discord.com/api/webhooks/872919555071148062/hssGBUjM9eBphxpZvvTzWs_2lLzzYJ7m7pFXU8uyKsYAOOzOy7qtggC0xHq0GrpJnkmo`});
-//var fs = require('fs');
-
-//fs.readFile('path/to/file', 'utf8', function(err, contents) {
-    //const activities_list =[]
-//}
-
-//);
+const photo20img = new Discord.MessageAttachment('command/instarandom/photo20.png', 'photo20.png');
+const photo21img = new Discord.MessageAttachment('command/instarandom/photo21.png', 'photo21.png');
+const instagramneige = new Discord.MessageAttachment('command/photo/janv/instagram17janv.png', 'instagram17janv.png');
+const video1video = new Discord.MessageAttachment('command/photo/video1.mp4.mp4', 'video1.mp4');
 const activities_list = [
-    "En Couple avec Ethan et Elyséa ; 2 Mois & 23 Jours ❤ / WIP RaspeberryPI3 / Love you honestly ! ❤",
-    "Elite fait passer un message à Elyséa : He loves you. Very Love",
-    "Ethan t'aimes Elyséa ❤",
+    "🌌 En Couple avec Ethan et Elyséa ; 3 Mois ❤ / WIP RaspeberryPI3 / Love you honestly ! ❤ 💌",
+    "Elite 🤖 fait passer un message à Elyséa : He loves you. Very Love",
+    "🔮 Ethan t'aimes Elyséa ❤",
     "Elite by Galaxy.",
-    "Don't let me down. Please Don't let me down -- Ethan",
-    "You're so cute Elyséa.",
-    "Tu es tellement gentille Elyséa",
-    "Il est vraiment désolé pour toutes ses conneries... Sorry Elyséa",
-    "De la part d'Ethan : ❤❤❤ Ely ❤❤❤",
-    "3 mois ! Nous tenons bien !",
-    "J'ai hâte de te voir ma chérie !",
+    "🥰 You're so cute Elyséa.🥰",
+    "Tu es tellement gentille Elyséa 👼",
+    "De la part d'Ethan 🍒 : ❤❤❤ Ely ❤❤❤",
+    "🎉3 Mois ! 🎉 Nous tenons bien !",
+    "✨ J'ai hâte de te voir ma chérie ! ✨",
     "Parleee mwaaa plus souvent Elyséa <3. Je n'attends que ça ! ^^",
-    "Merci pour ton magnifique texte bébé <3 !",
-    "J-1 for you",
-    "J-6 for together in School !",
-    "J-5 !",
-    "I'm Beautiful and Irremplaçable  ❤ and You : Cue and Irremplaçable ❤ !"
+    "📘 Merci pour ton magnifique texte bébé <3 !",
+    "🏫 J-3 for together in School ! 🏫",
+    "I'm Beautiful and Irremplaçable  ❤ and You : Cute and Irremplaçable ❤ !",
+    "🏁 Now 🏁. Continuions jusqu'a 4 mois ?! Qu'en penses-tu darling ! ^^",
+    "Nos pseudos : Cute et Beautiful 😊 / darling et sweetheart 😋"
 ];
 
 client.once('ready', () => {
     console.log('Ready!' + 'La connexion est affecté à : ' + `${client.user.tag}`);
 
     let i = 0;
-    setInterval(() => client.user.setActivity(`'${activities_list[i++ % activities_list.length]}`, {type : 'PLAYING'}), 1000)
+    setInterval(() => client.user.setActivity(`'${activities_list[i++ % activities_list.length]}`, {type : 'PLAYING'}), 1500)
 });
 
 client.login(token);
@@ -432,8 +421,18 @@ client.on('message',  message => {
             .setTimestamp()
             .setColor("#baff58")
 
-
-        var embedArr = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12, photo13, photo14, photo15, photo16, photo17, photo18, photo19, photo20];
+        const photo21 = new Discord.MessageEmbed()
+            .setTitle("La Conjugaison together !")
+            .setDescription("Love you ❤ From <@485789557858631680>")
+            //.setImage('https://prnt.sc/1qamc96')
+            .attachFiles(video1video)
+            .setImage('attachment://video1.mp4')
+            .setFooter("Photo 11")//, message.author.username, message.author.displayAvatarURL())
+            .setTimestamp()
+            .setColor("#baff58")
+            
+        //var embedArr = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8, photo9, photo10, photo11, photo12, photo13, photo14, photo15, photo16, photo17, photo18, photo19, photo20];
+        var embedArr = [photo1, photo21];
         let randomEmbed = embedArr[Math.floor(Math.random() * embedArr.length)];
         message.channel.send(randomEmbed);
     }
@@ -526,6 +525,8 @@ client.on('message',  message => {
                     .setColor("random")
                     .setDescription('ethan.57.44 : De la neige et encore de la neige ❄️❄️🌨️🌨️ Return from Sarrebourg (15/01/2021) #neige')
                     .setImage('https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/s320x320/139394885_1124703447966863_4079861218806196479_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=nc1c1MB3wcEAX9UkYE9&edm=APU89FABAAAA&ccb=7-4&oh=954f2e42d27cc27ee302959a909e3c95&oe=61289EED&_nc_sid=86f79a')
+                    //.setImage('attachment://instagram17janv.png');
+                    //.attachFiles(instagramneige);
                     .addFields(
                         {name: 'Date De Publication', value: '17 Janvier 2021 !', inline: true},
                         {name: 'Localisation ', value: 'Neuves-Maisons, Lorraine, France', inline: true},
@@ -943,16 +944,4 @@ client.on('message',  message => {
             });
         })
     }
-    if (message.content.startsWith('!minesweeper')) {
-        message.channel.send("test1")
-        const minesweeper = new Minesweeper({
-            rows: 10,
-            columns: 10,
-            mines: 5,
-            emote: 'bomb',
-        });
-        message.channel.send(minesweeper.start());
-
-    }
-
 })
