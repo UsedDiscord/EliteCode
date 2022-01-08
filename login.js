@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const snipes = new Discord.Collection();
 const {token} = require('./config.json');
 const repliqueC = '!replique';
-const insta1 = new Discord.MessageAttachment('command/instarandom/photoinsta1.png', 'photoinsta1.png')
+const insta1 = new Discord.MessageAttachment('command/instarandom/photoinsta1.png', 'photoinsta1.png');
 const photo1img = new Discord.MessageAttachment('command/instarandom/photo1.png', 'photo1.png');
 const photo2img = new Discord.MessageAttachment('command/instarandom/photo2.png', 'photo2.png');
 const photo3img = new Discord.MessageAttachment('command/instarandom/photo3.png', 'photo3.png');
@@ -33,28 +33,28 @@ const instanum13 = new Discord.MessageAttachment('command/instarandom/photoinsta
 const instanum14 = new Discord.MessageAttachment('command/instarandom/photoinstaselect14.png', 'photoinstaselect14.png');
 const instanum15 = new Discord.MessageAttachment('command/instarandom/photoinstaselect15.png', 'photoinstaselect15.png');
 const instanum16 = new Discord.MessageAttachment('command/instarandom/photoinstaselect16.png', 'photoinstaselect16.png');
+const lyricsFinder = require("lyrics-finder")
 
-/*const activities_list = [
-    "🌌 En Couple avec Ethan et Elyséa ; 3 Mois & 22 Jours ! ❤ / WIP RaspeberryPI3 / Love you honestly ! ❤ 💌",
+
+const activities_list = [
+    "🌌 En Couple avec Ethan et Elyséa ; 7 Mois & 08 Jours ! ❤ / WIP RaspeberryPI3 / Love you honestly ! ❤ 💌",
     "Elite 🤖 fait passer un message à Elyséa : He loves you. Very Love",
     "🔮 Ethan t'aimes Elyséa ❤",
     "Elite by Galaxy.",
     "🥰 You're so cute Elyséa.🥰",
     "Tu es tellement gentille Elyséa 👼",
     "De la part d'Ethan 🍒 : ❤❤❤ Ely ❤❤❤",
-    "🎉3 Mois ! 🎉 Nous tenons bien !",
+    "🎉7 Mois ! 🎉 Nous tenons à une limite près !",
     "✨ J'ai hâte de te voir ma chérie ! ✨",
     "Parleee mwaaa plus souvent Elyséa <3. Je n'attends que ça ! ^^",
     "📘 Merci pour ton magnifique texte bébé <3 !",
     "I'm Beautiful and Irremplaçable  ❤ and You : Cute and Irremplaçable ❤ !",
     "🏁 Now 🏁. Continuions jusqu'a 4 mois ?! Qu'en penses-tu darling ! ^^",
-    "Nos pseudos : Cute et Beautiful 😊 / darling et sweetheart 😋"
+    "Nos pseudos : Cute et Beautiful 😊 / darling et sweetheart 😋",
+    "It's not the end. ⏹️",
+    "No. Please No. Rest here."
 ];
-*/
-const activities_list = [
-    "OPTIMISATION CODE !",
-    "CODE REWRITE"
-]
+
 client.once('ready', () => {
     console.log('Ready!' + 'La connexion est affecté à : ' + `${client.user.tag}`);
     //client.channels.cache.get('856627704828657664').send("<@871055777455042570> Online right now !")
@@ -88,7 +88,7 @@ client.on('messageDelete', message => {
         LogChannel.send(DeletedLog)
 });
 
-client.on('message',  message => {
+client.on('message',  async message => {
     // Ignore messages that aren't from a guild
     if (!message.guild) return;
 
@@ -96,7 +96,8 @@ client.on('message',  message => {
         var embed = new Discord.MessageEmbed()
                 .setTitle("Voici les actions possibles d'EliteCode !")
                 .setColor(0x00AE86)
-                .setDescription('Bonjour' + " " + message.author.tag + '\n' +
+                .setDescription("BUG DE COMMANDE. Merci de revenir plus tard.")
+                /*.setDescription('Bonjour' + " " + message.author.tag + '\n' +
                     "Voici les actions qu'EliteCode peut effectuer avec le préfix \"**!**\"\n" +
                     "\n" +
                     "🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰 \n" +
@@ -104,6 +105,8 @@ client.on('message',  message => {
                     "✨ !help   ➡️ Donne la liste des commandes possible avec EliteCode\n" +
                     "✨ !ping   ➡️ Donne le ping de la personne concerné (~~un peu cassé~~)\n" +
                     "✨ !mp     ➡️ Envoi un message à la personne ayant effectué la commande.\n" +
+                    "✨ !lyric  ➡️ Permet la recherche de lyric de vos musiques.\n" +
+                    "✨ !changelog  ➡️ Les ajouts.\n" +
                     "✨ !insta1 ➡️ Affiche le post Instagram de @ethan.57.44 : Récupération de bague pour Elyséa\n" +
                     "✨ !lovemention ➡️ Envoi les pings des 2 amours (Ethan & Elyséa)\n" +
                     "✨ !depamour    ➡️Explique la dépendance affective d'Ethan.\n" +
@@ -124,12 +127,13 @@ client.on('message',  message => {
                     }))
             .catch(err => {
               console.error(`Error while sending message`, err);
-          
+        
               message.channel.send(':x: Attention !' + " <@"+message.author.id+"> Tu as sans doute fermé tes Messages Privés ! Vérifie et réeesaye la commande ! Je ne peux t'envoyer de messages !").then(message =>{
                   message.delete({timeout :10000})
               })
                 .catch(err => console.error(`Error while sending error message...\n`, err));
-            });
+            */
+           message.channel.send(embed)
         ;
     }
     ;
@@ -144,6 +148,17 @@ client.on('message',  message => {
         });
     }
     ;
+
+    if (message.content.startsWith('!changelog')) { //code remake good
+        message.channel.send("ㅤ").then(m => {
+            var embed = new Discord.MessageEmbed()
+                .setAuthor(`En date du 08/01/2022 : Ajout de la commande !lyric.`)
+                .setColor("RED")
+            m.edit(embed)
+        });
+    }
+    ;
+
     if (message.content.startsWith('!mp')) { //code remake good
         message.delete({timeout: 10000})
             message.author.send("Bonjour" + "<@" +message.author.id+">." + "\n" + "\n" + "Nous venons après que vous ayez tapé la commande «!mp», ce qui signifie que vous souhaitez de nous partager quelque chose ! Vous pouvez envoyer ceci dans notre message privé !" + "\n" + "Nous y répondrons le plus rapidement que possible ! (Attention, vos messages privés doivent être ouvert !)" + "\n" + "\n" + "Le Staff d'EliteCode !").catch(err => {
@@ -157,6 +172,8 @@ client.on('message',  message => {
           ;
     }
     ;
+    
+
     if (message.content.startsWith('!insta1')) { //code remake good
             const instag1 = new Discord.MessageEmbed()
                 .setTitle("Magnifique Journée avec Elyséa ! (Instagram)")
@@ -943,5 +960,64 @@ client.on('message',  message => {
             });
         })
     }
+
+    if (message.content.startsWith('!lyric')) { //code remake good
+        let singer;
+        let song;
+        let pages = []
+        let current = 0
+
+        const filter = msg => msg.author.id == message.author.id;
+        let options = {
+            max : 1
+        };
+
+        message.channel.send("Q 1/2:\n\nQui est l'auteur de la musique? *(Taper 'cancel' pour annuler la recherche)*")
+        let col = await message.channel.awaitMessages(filter, options)
+        if(col.first().content == 'cancel') return message.channel.send("Annuler");
+        singer = col.first().content
+
+        message.channel.send('Q 2/2:\n\nQuel est le titre? *(Taper "cancel" pour annuler la recherche)*')
+        let col2 = await message.channel.awaitMessages(filter, options);
+        if(col2.first().content == 'cancel') return message.channel.send("Annuler");
+        song = col2.first().content
+
+        let res = await lyricsFinder(singer, song) || "Non Trouver"
+
+        for (let i = 0; i < res.length; i += 2048){
+            let lyrics = res.substring(i, Math.min(res.length, i + 2048))
+            let page = new Discord.MessageEmbed()
+            .setDescription(lyrics)
+            .setFooter('Power by EliteCode, LyricFinder & Ethan !')
+            pages.push(page)
+        }
+
+        const filter2 = (reaction, user) => ['◀️' , '▶️'].includes(reaction.emoji.name) && (message.author.id == user.id)
+        const Embed = await message.channel.send(`Page: ${current+1}/${pages.length}`, pages[current])
+        await Embed.react('◀️')
+        await Embed.react('▶️')
+
+        let ReactionCol = Embed.createReactionCollector(filter2)
+
+        ReactionCol.on("collect", (reaction, user) => {
+            if(reaction.emoji.name == '▶️'){
+                if(current < pages.length - 1) {
+                    current += 1
+                    Embed.edit(`Page: ${current+1}/${pages.length}`, pages[current])
+                } else {
+                    if(reaction.emoji.name == '◀️'){
+                        if(current !== 0){
+                            current -= 1
+                            Embed.edit(`Page: ${current+1}/${pages.length}`, pages[current])
+                        }
+                    }
+                }
+            }
+        })
+    
+    
+    }
+    ;
+
 })
 ;
